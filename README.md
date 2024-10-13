@@ -31,16 +31,20 @@ This project contains automated tests for the login functionality of the Ananas.
 
    mvn clean test -DsuiteXmlFile=testng-parallel.xml
    
-5. View the reports: After the tests are executed, the report is generated in the extent-reports/extent-report.html. Open this       file in your browser to view the detailed test results.
+5. View the reports: 
+	After the tests are executed, the report is generated in the extent-reports/extent-report.html. Open this       file in 	your browser to view the detailed test results.
 
 
 Project Structure
+
 /src/main/java - Contains the main classes, including the Page Object Model (POM) classes.
 /src/test/java - Contains the test classes and the implementation of the test cases.
 /testng.xml - Configuration file for running tests on different browsers.
 
 Parallel Execution
+
 The tests can be executed in parallel across multiple browsers using the testng-parallel.xml file.
+
 
 Screenshots and Reports
 

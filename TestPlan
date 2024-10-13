@@ -1,0 +1,66 @@
+Test Plan for Login Functionality:
+
+Objective:
+To test the login functionality of the Ananas.rs platform using Selenium WebDriver and TestNG. The objective is to ensure that all elements of the login functionality are working correctly and that the login process functions correctly with different sets of valid and invalid data.
+
+Scope:
+Test the login functionality for different types of input (valid data, invalid data, empty fields, overly long passwords, SQL injection, XSS attacks).
+Test the responsiveness of the UI on mobile devices and tablets.
+Test cross-browser compatibility (Chrome, Firefox, Edge).
+
+Types of Testing:
+
+1.Functional Testing:
+-Validation of successful login with valid credentials.
+-Checking error messages for invalid inputs (incorrect email, incorrect password, empty fields).
+
+2.Security Testing:
+-SQL injection tests.
+-Testing special character inputs.
+-Cross-Site Scripting (XSS) tests.
+
+3.Responsive Design Testing:
+-Ensure the correct display and functionality on mobile devices and tablets.
+
+4.Cross-browser Testing:
+-Testing the functionality on different browsers (Chrome, Firefox, Edge).
+
+Expected Errors:
+-Empty username and password fields.
+-Invalid email format.
+-Incorrect password.
+-Incorrect email with valid password combination.
+-Overly long password.
+-SQL injection attempts.
+XSS injection attempts.
+
+Test Cases:
+Here’s the complete list of 19 test cases:
+
+TC1: Valid login credentials (correct email and password).
+TC2: Valid login with a two-character username.
+TC3: Invalid password with a valid email.
+TC4: Invalid login with mixed valid and invalid credentials.
+TC5: Invalid email with a valid password.
+TC6: Login attempt with empty fields.
+TC7: Empty email field with a valid password.
+TC8: Verify the "Forgot Password" link functionality.
+TC9: Maximum password length (e.g., 300 characters).
+TC10: Minimum password length (e.g., less than 8 characters).
+TC11: Login with a password that is exactly 7 characters.
+TC12: Lockout functionality after multiple failed attempts.
+TC13: Invalid email format with special characters.
+TC14: Invalid email format (missing "@" symbol).
+TC15: SQL injection attack in the username field.
+TC16: Cross-site scripting (XSS) attack in the username field.
+TC17: Responsive design test for mobile devices (e.g., iPhone X).
+TC18: Responsive design test for tablet devices (e.g., iPad Pro).
+TC19: Cross-browser test to verify the login works in Firefox and Edge.
+
+Tools:
+-Selenium WebDriver for test automation.
+-TestNG for test case management and parallel execution.
+-Extent Reports for generating detailed test reports.
+-GitHub for version control and repository management.
+
+

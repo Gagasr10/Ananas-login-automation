@@ -17,7 +17,7 @@ This project contains automated tests for the login functionality of the Ananas.
 
 1.  Clone the project from GitHub:
   
-   git clone https://github.com/username/repository.git
+   	git clone https://github.com/username/repository.git
    
 2. Navigate to the project directory:
 
@@ -32,7 +32,7 @@ This project contains automated tests for the login functionality of the Ananas.
    mvn clean test -DsuiteXmlFile=testng-parallel.xml
    
 5. View the reports: 
-	After the tests are executed, the report is generated in the extent-reports/extent-report.html. Open this       file in 	your browser to view the detailed test results.
+  	After the tests are executed, the report is generated in the extent-reports/extent-report.html. Open this       file in    	your browser to view the detailed test results.
 
 
 Project Structure
@@ -42,6 +42,7 @@ Project Structure
 /src/test/java - Contains the test classes and the implementation of the test cases.
 
 /testng.xml - Configuration file for running tests on different browsers.
+
 
 
 Parallel Execution

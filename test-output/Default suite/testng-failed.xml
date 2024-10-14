@@ -5,8 +5,10 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="testTabletResponsiveDesign"/>
+          <include name="testAccountLockoutAfterFailedAttempts"/>
           <include name="setUp"/>
+          <include name="testMaxPasswordLength"/>
+          <include name="testInvalidEmailValidPassworld"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.LoginTest -->

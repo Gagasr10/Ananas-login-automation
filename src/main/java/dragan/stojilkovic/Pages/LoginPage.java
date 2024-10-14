@@ -2,6 +2,7 @@ package dragan.stojilkovic.Pages;
 
 import java.time.Duration;
 
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
     WebDriver driver;
+    WebDriverWait wait;
 
     // Username input field located by XPath
     @FindBy(xpath = "//input[@id='username']")
@@ -22,7 +24,6 @@ public class LoginPage {
 
     // Login button located by XPath
     @FindBy(xpath = "//button[@id='login-submit']")
-
     WebElement loginBtn;
 
     // Error message displayed when login fails, located by XPath
@@ -41,34 +42,32 @@ public class LoginPage {
     @FindBy(xpath = "//a[span[text()='Zaboravili ste lozinku?']]")
     WebElement forgotPasswordLink;
 
-    
     @FindBy(xpath = "//div[@id='errorMessage']")
-    WebElement errorMessag;  // 
-    
-  // XPath selector for the error message for the username field
+    WebElement errorMessag;
+
     @FindBy(xpath = "(//p[contains(@class, 'Mui-error')])[1]")
     private WebElement usernameErrorMessage;
 
-    // XPath selector for the error message for the password field
     @FindBy(xpath = "(//p[contains(@class, 'Mui-error')])[2]")
     private WebElement passwordErrorMessage;
-    
+
     @FindBy(xpath = "//p[contains(text(), 'Minimum 8 karaktera.')]")
-	public WebElement minPasswordLengthErrorMessage;
+    public WebElement minPasswordLengthErrorMessage;
 
     @FindBy(xpath = "//span[@class='sc-79pcpx-0 ieekjL']")
     WebElement userName;
 
+    // Close popup button
+    @FindBy(xpath = "//button[@aria-label='zatvori popup']")
+    WebElement closeButton;
     
     
-   
 
-    
     // Constructor for the LoginPage class that initializes web elements using PageFactory
     public LoginPage(WebDriver driver) {
         this.driver = driver;
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));  // WebDriverWait set to 5 seconds
         PageFactory.initElements(driver, this);
-        
     }
 
     // Method to set the username in the username input field
@@ -85,8 +84,8 @@ public class LoginPage {
     public void clickLogin() {
         loginBtn.click();
     }
-    
-    // Combined method for loogin
+
+    // Combined method for login
     public void login(String user, String pass) {
         setUsername(user);
         setPassword(pass);
@@ -95,9 +94,8 @@ public class LoginPage {
 
     // Method to retrieve the error message displayed after a failed login attempt
     public String getErrorMessage() {
-    	  WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-          wait.until(ExpectedConditions.visibilityOf(loginErrorMessage));  // Wait until the login error message is visible
-          return loginErrorMessage.getText();
+        wait.until(ExpectedConditions.visibilityOf(loginErrorMessage));  // Wait until the login error message is visible
+        return loginErrorMessage.getText();
     }
 
     // Method to click the accept cookies button
@@ -114,8 +112,8 @@ public class LoginPage {
     public void clickForgotPassword() {
         forgotPasswordLink.click();
     }
-    
- // Method to get the error message for the username field
+
+    // Method to get the error message for the username field
     public String getUsernameErrorMessage() {
         return usernameErrorMessage.getText();
     }
@@ -124,35 +122,33 @@ public class LoginPage {
     public String getPasswordErrorMessage() {
         return passwordErrorMessage.getText();
     }
-    
+
     public String getMinPasswordLengthErrorMessage() {
         return minPasswordLengthErrorMessage.getText();
     }
 
     public String getLoggedInUserName() {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         WebElement userNameElement = wait.until(ExpectedConditions.visibilityOf(userName));
         return userNameElement.getText();
     }
 
+    // Method to close popup if it appears
+    public void closePopup() {
+        try {
+            // Use a short wait to quickly check for the popup
+            WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(2));
 
-    public WebElement getUserNameElement() {
-        return userName;
+            // Wait for the close button of the popup to be clickable
+            WebElement popup = shortWait.until(ExpectedConditions.elementToBeClickable(closeButton));
+
+            // If the popup is displayed, click to close it
+            if (popup.isDisplayed()) {
+                popup.click();
+                System.out.println("Popup closed.");
+            }
+        } catch (TimeoutException e) {
+            // If popup does not appear, continue the test
+            System.out.println("Popup not found, continuing with the test.");
+        }
     }
-
-   
-
-    
-
-    
-    
-//    public String getLoginErrorMessage() {
-//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-//        wait.until(ExpectedConditions.visibilityOf(loginErrorMessage));  // Wait until the login error message is visible
-//        return loginErrorMessage.getText();
-//    }
-    
-    
-    
-    
 }

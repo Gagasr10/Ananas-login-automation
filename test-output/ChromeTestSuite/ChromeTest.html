@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>17/2/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Oct 13 18:54:13 CEST 2024</td>
+<td>Started on:</td><td>Mon Oct 14 10:46:35 CEST 2024</td>
 </tr>
-<tr><td>Total time:</td><td>81 seconds (81349 ms)</td>
+<tr><td>Total time:</td><td>101 seconds (101944 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -77,17 +77,17 @@ function toggleAllBoxes() {
 <tr>
 <td title='tests.LoginTest.testAccountLockoutAfterFailedAttempts()'><b>testAccountLockoutAfterFailedAttempts</b><br>Test class: tests.LoginTest</td>
 <td><div><pre>java.lang.AssertionError: expected [Nalog je zaključan zbog više neuspešnih pokušaja.] but found [Email ili lozinka nisu u redu.]
-	at tests.LoginTest.testAccountLockoutAfterFailedAttempts(LoginTest.java:224)
+	at tests.LoginTest.testAccountLockoutAfterFailedAttempts(LoginTest.java:256)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace557982257", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace557982257'><pre>java.lang.AssertionError: expected [Nalog je zaključan zbog više neuspešnih pokušaja.] but found [Email ili lozinka nisu u redu.]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1729171313", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1729171313'><pre>java.lang.AssertionError: expected [Nalog je zaključan zbog više neuspešnih pokušaja.] but found [Email ili lozinka nisu u redu.]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:629)
 	at org.testng.Assert.assertEquals(Assert.java:639)
-	at tests.LoginTest.testAccountLockoutAfterFailedAttempts(LoginTest.java:224)
+	at tests.LoginTest.testAccountLockoutAfterFailedAttempts(LoginTest.java:256)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -117,22 +117,22 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
+<td>3</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
 <td title='tests.LoginTest.testMaxPasswordLength()'><b>testMaxPasswordLength</b><br>Test class: tests.LoginTest</td>
 <td><div><pre>java.lang.AssertionError: expected [Password too long.] but found [Email ili lozinka nisu u redu.]
-	at tests.LoginTest.testMaxPasswordLength(LoginTest.java:182)
+	at tests.LoginTest.testMaxPasswordLength(LoginTest.java:205)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace457714879", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace457714879'><pre>java.lang.AssertionError: expected [Password too long.] but found [Email ili lozinka nisu u redu.]
+... Removed 33 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1515612450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1515612450'><pre>java.lang.AssertionError: expected [Password too long.] but found [Email ili lozinka nisu u redu.]
 	at org.testng.Assert.fail(Assert.java:99)
 	at org.testng.Assert.failNotEquals(Assert.java:1037)
 	at org.testng.Assert.assertEqualsImpl(Assert.java:140)
 	at org.testng.Assert.assertEquals(Assert.java:122)
 	at org.testng.Assert.assertEquals(Assert.java:629)
 	at org.testng.Assert.assertEquals(Assert.java:639)
-	at tests.LoginTest.testMaxPasswordLength(LoginTest.java:182)
+	at tests.LoginTest.testMaxPasswordLength(LoginTest.java:205)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -162,7 +162,7 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div></td>
-<td>2</td>
+<td>3</td>
 <td>tests.LoginTest@4466af20</td></tr>
 </table><p>
 <table width='100%' border='1' class='invocation-passed'>
@@ -173,7 +173,32 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
+<td title='tests.LoginTest.testXSSInUsername()'><b>testXSSInUsername</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>tests.LoginTest@4466af20</td></tr>
+<tr>
 <td title='tests.LoginTest.testInvalidPassword()'><b>testInvalidPassword</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>tests.LoginTest@4466af20</td></tr>
+<tr>
+<td title='tests.LoginTest.testSQLInjection()'><b>testSQLInjection</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>tests.LoginTest@4466af20</td></tr>
+<tr>
+<td title='tests.LoginTest.testForgotPasswordLink()'><b>testForgotPasswordLink</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>tests.LoginTest@4466af20</td></tr>
+<tr>
+<td title='tests.LoginTest.testEmptyFields()'><b>testEmptyFields</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>1</td>
+<td>tests.LoginTest@4466af20</td></tr>
+<tr>
+<td title='tests.LoginTest.testMinPasswordLength()'><b>testMinPasswordLength</b><br>Test class: tests.LoginTest</td>
 <td></td>
 <td>1</td>
 <td>tests.LoginTest@4466af20</td></tr>
@@ -183,49 +208,29 @@ function toggleAllBoxes() {
 <td>1</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
-<td title='tests.LoginTest.testEmptyEmailField()'><b>testEmptyEmailField</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>tests.LoginTest@4466af20</td></tr>
-<tr>
-<td title='tests.LoginTest.testSQLInjection()'><b>testSQLInjection</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>tests.LoginTest@4466af20</td></tr>
-<tr>
-<td title='tests.LoginTest.testValidLoginTwoCharactersName()'><b>testValidLoginTwoCharactersName</b><br>Test class: tests.LoginTest</td>
+<td title='tests.LoginTest.testSpecialCharactersInEmailAddress()'><b>testSpecialCharactersInEmailAddress</b><br>Test class: tests.LoginTest</td>
 <td></td>
 <td>1</td>
-<td>tests.LoginTest@4466af20</td></tr>
-<tr>
-<td title='tests.LoginTest.testEmptyFields()'><b>testEmptyFields</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
 <td title='tests.LoginTest.testValidLogin()'><b>testValidLogin</b><br>Test class: tests.LoginTest</td>
 <td></td>
+<td>2</td>
+<td>tests.LoginTest@4466af20</td></tr>
+<tr>
+<td title='tests.LoginTest.testInvalidEmailValidPassworld()'><b>testInvalidEmailValidPassworld</b><br>Test class: tests.LoginTest</td>
+<td></td>
+<td>2</td>
+<td>tests.LoginTest@4466af20</td></tr>
+<tr>
+<td title='tests.LoginTest.testInvalidEmail_MissingAtSymbol()'><b>testInvalidEmail_MissingAtSymbol</b><br>Test class: tests.LoginTest</td>
+<td></td>
 <td>1</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
-<td title='tests.LoginTest.testSpecialCharactersInEmailAddress()'><b>testSpecialCharactersInEmailAddress</b><br>Test class: tests.LoginTest</td>
+<td title='tests.LoginTest.testPasswordBoundary_SevenCharacters()'><b>testPasswordBoundary_SevenCharacters</b><br>Test class: tests.LoginTest</td>
 <td></td>
-<td>0</td>
-<td>tests.LoginTest@4466af20</td></tr>
-<tr>
-<td title='tests.LoginTest.testForgotPasswordLink()'><b>testForgotPasswordLink</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>tests.LoginTest@4466af20</td></tr>
-<tr>
-<td title='tests.LoginTest.testXSSInUsername()'><b>testXSSInUsername</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
-<td>tests.LoginTest@4466af20</td></tr>
-<tr>
-<td title='tests.LoginTest.testInvalidEmailFormat()'><b>testInvalidEmailFormat</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
+<td>2</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
 <td title='tests.LoginTest.testInvalidLogin_MixedCredentials()'><b>testInvalidLogin_MixedCredentials</b><br>Test class: tests.LoginTest</td>
@@ -233,14 +238,9 @@ function toggleAllBoxes() {
 <td>1</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
-<td title='tests.LoginTest.testInvalidEmail_MissingAtSymbol()'><b>testInvalidEmail_MissingAtSymbol</b><br>Test class: tests.LoginTest</td>
+<td title='tests.LoginTest.testEmptyEmailField()'><b>testEmptyEmailField</b><br>Test class: tests.LoginTest</td>
 <td></td>
-<td>0</td>
-<td>tests.LoginTest@4466af20</td></tr>
-<tr>
-<td title='tests.LoginTest.testPasswordBoundary_SevenCharacters()'><b>testPasswordBoundary_SevenCharacters</b><br>Test class: tests.LoginTest</td>
-<td></td>
-<td>0</td>
+<td>1</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
 <td title='tests.LoginTest.testTabletResponsiveDesign()'><b>testTabletResponsiveDesign</b><br>Test class: tests.LoginTest</td>
@@ -248,14 +248,14 @@ function toggleAllBoxes() {
 <td>1</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
-<td title='tests.LoginTest.testInvalidEmailValidPassworld()'><b>testInvalidEmailValidPassworld</b><br>Test class: tests.LoginTest</td>
+<td title='tests.LoginTest.testInvalidEmailFormat()'><b>testInvalidEmailFormat</b><br>Test class: tests.LoginTest</td>
 <td></td>
 <td>1</td>
 <td>tests.LoginTest@4466af20</td></tr>
 <tr>
-<td title='tests.LoginTest.testMinPasswordLength()'><b>testMinPasswordLength</b><br>Test class: tests.LoginTest</td>
+<td title='tests.LoginTest.testValidLoginTwoCharactersName()'><b>testValidLoginTwoCharactersName</b><br>Test class: tests.LoginTest</td>
 <td></td>
-<td>0</td>
+<td>7</td>
 <td>tests.LoginTest@4466af20</td></tr>
 </table><p>
 </body>

@@ -1,0 +1,155 @@
+ Test Report for Logifuture task
+
+
+ Test Suite: Login Test Suite  
+ Test Environment:
+- Browser: Chrome version 129.0.6668.101 (also tested on Firefox and Edge)
+- Platform: Windows 10  
+- URL: https://ananas.rs/login  
+- Automation Framework: Selenium with TestNG  
+- Reporting Tool: Extent Reports  
+- Date: 14.10.2024  
+
+
+	Summary:
+- Total Tests Executed: 19
+- Tests Passed: 17
+- Tests Failed:  2
+- Tests Skipped: 0
+
+
+	Test Results:
+
+1. Test Case: testValidLogin
+   - Status:Passed
+   - Description: Verifies successful login with valid credentials. 
+   - Expected Result: User is redirected to the homepage, and username 'John' is displayed correctly.
+   - Actual Result: User is redirected successfully, and the username is correct.
+
+2. Test Case: testValidLoginTwoCharactersName
+   - Status: Passed
+   - Description: Verifies login with a username that has only two characters.
+   - Expected Result: Username 'Ed' is displayed after login.
+   - Actual Result: Username 'Ed' displayed correctly after login.
+
+3. Test Case: testInvalidPassword
+   - Status: Passed
+   - Description: Verifies login attempt with a valid username and invalid password.
+   - Expected Result: Error message 'Email ili lozinka nisu u redu.' should be displayed.
+   - Actual Result: Correct error message displayed.
+
+4. Test Case: testInvalidLogin_MixedCredentials
+   - Status: Passed
+   - Description: Verifies login attempt with valid username and invalid password.
+   - Expected Result: Error message 'Email ili lozinka nisu u redu.' should be displayed.
+   - Actual Result: Correct error message displayed.
+
+5. Test Case: testInvalidEmailValidPassword
+   - Status: Passed
+   - Description: Verifies login with an invalid email but valid password.
+   - Expected Result:Error message 'Email ili lozinka nisu u redu.' should be displayed.
+   - Actual Result:** Correct error message displayed.
+
+6. Test Case: testEmptyFields
+   - Status:Passed
+   - Description: Verifies error messages when login is attempted with empty fields.
+   - Expected Result: Username and password fields should display 'Ovo polje je obavezno.'
+   - Actual Result: Correct error messages displayed.
+
+7. Test Case: testEmptyEmailField
+   - Status: Passed
+   - Description: Verifies error message when email field is left empty.
+   - Expected Result: Username field should display 'Ovo polje je obavezno.'
+   - Actual Result: Correct error message displayed.
+
+8. Test Case: testForgotPasswordLink
+   - Status:Passed
+   - Description: Verifies the functionality of the "Forgot Password" link.
+   - Expected Result:User should be redirected to the forgot password page.
+   - Actual Result: User successfully redirected.
+
+9. Test Case: testMaxPasswordLength
+   - Status: Failed
+   - Description:Verifies behavior when a password with 300 characters is used.
+   - Expected Result: Error message 'Password too long' should be displayed.
+   - Actual Result:Error message 'Email ili lozinka nisu u redu.' displayed instead of expected message.
+
+10. Test Case: testMinPasswordLength
+    - Status: Passed
+    - Description: Verifies error message for a password that's too short.
+    - Expected Result:Error message 'Minimum 8 karaktera.' should be displayed.
+    - Actual Result: Correct error message displayed.
+
+11. Test Case: testPasswordBoundary_SevenCharacters
+    - Status:Passed
+    - Description:Verifies behavior when a 7-character password is used.
+    - Expected Result:Error message 'Minimum 8 karaktera.' should be displayed.
+    - Actual Result: Correct error message displayed.
+
+12. Test Case: testAccountLockoutAfterFailedAttempts
+    - Status:Failed
+    - Description:Verifies account lockout after 5 consecutive failed login attempts (BruteForceAttack prevention).
+    - Expected Result: Account should be locked after 5 failed login attempts, displaying an error message about account 
+      lockout.
+    - Actual Result: Account was not locked, and standard login error message was shown.
+
+13. Test Case: testSpecialCharactersInEmailAddress
+    - Status: Passed
+    - Description:Verifies error message for login with special characters in the email.
+    - Expected Result:Error message 'Email adresa nije ispravna.' should be displayed.
+    - Actual Result:Correct error message displayed.
+
+14. Test Case: testInvalidEmailFormat
+    - Status: Passed
+    - Description:Verifies login attempt with an invalid email format.
+    - Expected Result:Error message 'Email adresa nije ispravna.' should be displayed.
+    - Actual Result:Correct error message displayed.
+
+15. Test Case: testInvalidEmail_MissingAtSymbol
+    - Status:Passed
+    - Description:Verifies login attempt with a missing '@' symbol in the email.
+    - Expected Result:Error message 'Email adresa nije ispravna.' should be displayed.
+    - Actual Result:Correct error message displayed.
+
+16. Test Case: testSQLInjection
+    - Status: Passed
+    - Description:Verifies login with an SQL injection attempt.
+    - Expected Result:Error message 'Email adresa nije ispravna.' should be displayed.
+    - Actual Result:Correct error message displayed.
+
+17. Test Case: testXSSInUsername
+    - Status: Passed
+    - Description: Verifies login with an XSS attack attempt in the username field.
+    - Expected Result:Error message 'Email adresa nije ispravna.' should be displayed.
+    - Actual Result:Correct error message displayed.
+
+18. Test Case: testMobileResponsiveDesign
+    - Status:Passed
+    - Description: Verifies the login form display on mobile device resolution.
+    - Expected Result:Login form should display correctly.
+    - Actual Result: Login form displayed correctly.
+
+19. Test Case: testTabletResponsiveDesign
+    - Status:Passed
+    - Description:Verifies the login form display on tablet device resolution.
+    - Expected Result:Login form should display correctly.
+    - Actual Result:Login form displayed correctly.
+
+
+	Analysis of Failed Test Cases:
+
+1. testMaxPasswordLength (Failed) 
+   Issue:System returned the generic error message 'Email ili lozinka nisu u redu.' instead of a more specific message 
+   indicating the password length was too long.  
+   Recommendation:The system should have proper validation for password length and display a clear error message such as 
+   'Password too long.'
+
+2. testAccountLockoutAfterFailedAttempts (Failed)  
+   Issue:The account was not locked after 5 consecutive failed login attempts, which could be a security issue.  
+   Recommendation:Implement account lockout after a certain number of failed attempts to prevent brute force attacks.
+
+
+	Conclusion:
+	The overall performance of the test suite was successful, with 17 tests passing and 2 tests failing. The failures indicate 
+	potential areas for improvement in the password validation logic and account lockout functionality. Further investigation
+	and enhancements are recommended to ensure that the application meets expected security standards.

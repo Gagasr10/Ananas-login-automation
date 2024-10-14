@@ -21,7 +21,7 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-        // Dinamička putanja za Extent Report
+    	// Dynamic path for Extent Report
         String reportPath = System.getProperty("user.dir") + "/extent-reports/extent-report.html";
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
         sparkReporter.config().setDocumentTitle("Login Test Report");
@@ -47,7 +47,7 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         test.get().log(Status.FAIL, "Test Failed: " + result.getThrowable());
 
-        // Dinamičko kreiranje putanje za screenshot
+     // Dynamic path creation for screenshot
         Object currentClass = result.getInstance();
         WebDriver driver = ((LoginTest) currentClass).getDriver();
         
@@ -70,6 +70,6 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        extent.flush();  // Zatvara Extent izveštaj i piše u fajl
+        extent.flush();  //  Closes the Extent report and writes to the file
     }
 }

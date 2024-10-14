@@ -54,13 +54,16 @@ public class LoginTest {
     }
 
     @Test  //1.
-    public void testValidLogin() {
+    public void testValidLogin() throws InterruptedException {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+        // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login using valid credentials
         loginPage.login("wanaxa5524@craftapk.com", "John1000");
-
+        
         // Assert that the user is redirected to the correct URL after a successful login
         Assert.assertEquals(driver.getCurrentUrl(), "https://ananas.rs/login");
 
@@ -69,12 +72,13 @@ public class LoginTest {
         Assert.assertEquals(loginPage.getLoggedInUserName(), expectedUserName, "Logged-in user's name should be displayed correctly.");
     }
 
-
-
     @Test  //2.
     public void testValidLoginTwoCharactersName() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+        // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login using valid credentials
         loginPage.login("ub4r3t474c@flashpost.net", "EdCA1000");
@@ -93,6 +97,9 @@ public class LoginTest {
     public void testInvalidPassword() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Use the login method to perform login with valid username and invalid password
         loginPage.login("wanaxa5524@craftapk.com", "invalidPass");
@@ -106,6 +113,7 @@ public class LoginTest {
     public void testInvalidLogin_MixedCredentials() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        loginPage.closePopup();
 
         // Use the login method with mixed credentials
         loginPage.login("wanaxa5524@craftapk.com", "EdLa1000");
@@ -119,6 +127,9 @@ public class LoginTest {
     public void testInvalidEmailValidPassworld() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Use the login method with an invalid username and valid password
         loginPage.login("invalidUser@fake.com", "John1000");
@@ -132,6 +143,9 @@ public class LoginTest {
     public void testEmptyFields() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Click the login button without entering any data
         loginPage.clickLogin();
@@ -145,6 +159,9 @@ public class LoginTest {
     public void testEmptyEmailField() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with an empty email field and valid password
         loginPage.login("", "John1000");
@@ -157,6 +174,9 @@ public class LoginTest {
     public void testForgotPasswordLink() throws InterruptedException {
     	  // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Click on the 'Forgot Password' link
         loginPage.clickForgotPassword();
@@ -173,6 +193,9 @@ public class LoginTest {
     public void testMaxPasswordLength() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with a valid email and an overly long password
         String longPassword = "a".repeat(300);
@@ -186,6 +209,9 @@ public class LoginTest {
     public void testMinPasswordLength() throws InterruptedException {
     	  // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with a valid email and a password that's too short
         loginPage.login("wanaxa5524@craftapk.com", "a");
@@ -202,6 +228,9 @@ public class LoginTest {
     public void testPasswordBoundary_SevenCharacters() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with a valid email and a 7-character password
         loginPage.login("wanaxa5524@craftapk.com", "abcdefg");
@@ -214,6 +243,9 @@ public class LoginTest {
     public void testAccountLockoutAfterFailedAttempts() throws InterruptedException {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Attempt to login multiple times with invalid credentials
         for (int i = 0; i <= 5; i++) {
@@ -228,6 +260,9 @@ public class LoginTest {
     public void testSpecialCharactersInEmailAddress()  {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with special characters in the username and a valid password
         loginPage.login("!@#$%^&*()", "John1000");
@@ -241,6 +276,9 @@ public class LoginTest {
     public void testInvalidEmailFormat() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with an invalid email format and a valid password
         loginPage.login("wanaxa5524@craftapkcom", "Dzoni100");
@@ -253,6 +291,9 @@ public class LoginTest {
     public void testInvalidEmail_MissingAtSymbol() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with a missing '@' symbol in the email and a valid password
         loginPage.login("wanaxa5524craftapk.com", "Dzoni100");
@@ -265,12 +306,13 @@ public class LoginTest {
     public void testSQLInjection()  {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+        // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with an SQL injection attempt in the username
         loginPage.login("' OR 1=1 --", "password");
-        
-       
-        
+                      
         // Assert that the correct error message is displayed
         Assert.assertEquals(loginPage.getUsernameErrorMessage(), "Email adresa nije ispravna.");
     }
@@ -279,6 +321,9 @@ public class LoginTest {
     public void testXSSInUsername() {
         // Accept cookies before performing any other actions
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
 
         // Perform login with an XSS attempt in the username
         loginPage.login("<script>alert('XSS')</script>", "John1000");
@@ -292,6 +337,9 @@ public class LoginTest {
     public void testMobileResponsiveDesign() {
     	// Set the resolution for a mobile device (eg iPhone X)
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
         
         driver.manage().window().setSize(new org.openqa.selenium.Dimension(375, 812)); // iPhone X dimensions
         
@@ -307,6 +355,9 @@ public class LoginTest {
     public void testTabletResponsiveDesign() {
     	// Set resolution for tablet device (eg iPad Pro)
         loginPage.acceptCookies();
+        
+     // Close popup if it appears
+        loginPage.closePopup();
         
         driver.manage().window().setSize(new org.openqa.selenium.Dimension(1024, 1366)); // iPad Pro dimensions
         

@@ -1,10 +1,13 @@
 Test Plan for Login Functionality:
 
 Objective:
-To test the login functionality of the Ananas.rs platform using Selenium WebDriver and TestNG. The objective is to ensure that all elements of the login functionality are working correctly and that the login process functions correctly with different sets of valid and invalid data.
+To test the login functionality of the Ananas.rs platform using Selenium WebDriver and TestNG. The objective is to ensure that
+ all elements of the login functionality are working correctly and that the login process functions correctly with different 
+ sets of valid and invalid data.
 
 Scope:
-Test the login functionality for different types of input (valid data, invalid data, empty fields, overly long passwords, SQL injection, XSS attacks).
+Test the login functionality for different types of input (valid data, invalid data, empty fields, overly long passwords, SQL 
+injection, XSS attacks).
 Test the responsiveness of the UI on mobile devices and tablets.
 Test cross-browser compatibility (Chrome, Firefox, Edge).
 

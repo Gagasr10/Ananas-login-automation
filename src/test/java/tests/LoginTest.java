@@ -153,6 +153,8 @@ public class LoginTest {
         // Assert that error messages are displayed for empty fields
         Assert.assertEquals(loginPage.getUsernameErrorMessage(), "Ovo polje je obavezno.");
         Assert.assertEquals(loginPage.getPasswordErrorMessage(), "Ovo polje je obavezno.");
+        Assert.assertEquals(driver.getCurrentUrl(), "https://ananas.rs/login");
+
     }
 
     @Test  //7
@@ -211,7 +213,7 @@ public class LoginTest {
         loginPage.acceptCookies();
         
      // Close popup if it appears
-        loginPage.closePopup();
+     //   loginPage.closePopup();
 
         // Perform login with a valid email and a password that's too short
         loginPage.login("wanaxa5524@craftapk.com", "a");

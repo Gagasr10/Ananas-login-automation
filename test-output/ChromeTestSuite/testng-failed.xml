@@ -6,11 +6,11 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
+          <include name="testEmptyFields"/>
+          <include name="testMinPasswordLength"/>
           <include name="testAccountLockoutAfterFailedAttempts"/>
           <include name="setUp"/>
-          <include name="testXSSInUsername"/>
           <include name="testMaxPasswordLength"/>
-          <include name="testValidLoginTwoCharactersName"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- tests.LoginTest -->

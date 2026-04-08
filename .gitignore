@@ -1,0 +1,59 @@
+# Compiled Java classes
+*.class
+target/
+bin/
+
+# Eclipse IDE files
+.classpath
+.project
+.settings/
+*.prefs
+
+# IntelliJ IDEA (optional, in case someone uses it)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Maven logs
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+log/
+
+# Test outputs – reports and screenshots (auto-generated, not needed in repo)
+screenshots/
+extent-reports/
+test-output/
+*.html
+*.log
+
+
+chromedriver.exe
+chromedriver
+geckodriver.exe
+geckodriver
+msedgedriver.exe
+msedgedriver
+
+# Sensitive configuration (emails, passwords, URLs)
+src/test/resources/config.properties
+config.properties
+*.properties
+
+# OS metadata
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~

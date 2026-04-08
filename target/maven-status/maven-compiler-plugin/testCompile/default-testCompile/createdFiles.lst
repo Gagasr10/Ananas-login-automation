@@ -1,2 +1,4 @@
-tests\LoginTest.class
 tests\TestListener.class
+tests\SearchTest.class
+tests\BaseTest.class
+tests\LoginTest.class

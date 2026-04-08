@@ -5,10 +5,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dragan.stojilkovic</groupId>
-    <artifactId>DemoAnanasProjekat</artifactId>
+    <artifactId>Ananas-login-tests</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
-    <name>DemoAnanasProjekat</name>
+    <name>ananas-login-tests</name>
+    <description>Selenium automation tests for login functionality on ananas.rs</description>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -16,66 +17,56 @@
     </properties>
 
     <dependencies>
-        <!-- Selenium Java dependency -->
-        <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
-<dependency>
-    <groupId>org.seleniumhq.selenium</groupId>
-    <artifactId>selenium-java</artifactId>
-    <version>4.27.0</version>
-</dependency>
+        <!-- Selenium Java -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.27.0</version>
+        </dependency>
 
-
-        <!-- WebDriverManager to automate browser driver management -->
+        <!-- WebDriverManager - automatic driver management -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
             <version>5.9.2</version>
         </dependency>
 
-        <!-- TestNG for testing framework -->
+        <!-- TestNG testing framework -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.10.2</version>
             <scope>test</scope>
         </dependency>
-        
-        <dependency>
-    <groupId>com.aventstack</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>5.0.9</version>
-</dependency>
 
-
-        <!-- ExtentReports for reporting -->
+        <!-- ExtentReports - reporting (single version) -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>5.1.2</version> <!-- Or a newer version if available -->
+            <version>5.1.2</version>
         </dependency>
-        
     </dependencies>
 
     <build>
-        <pluginManagement>
-            <plugins>
-                <!-- Maven Compiler Plugin for compiling Java code -->
-                <plugin>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.13.0</version>
-                </plugin>
+        <plugins>
+            <!-- Maven Compiler Plugin -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.13.0</version>
+            </plugin>
 
-                <!-- Maven Surefire Plugin to run TestNG tests -->
-                <plugin>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <version>3.3.0</version>
-                    <configuration>
-                        <includes>
-                            <include>**/LoginTest.java</include> <!-- Targeting only the test class -->
-                        </includes>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+            <!-- Maven Surefire Plugin to run TestNG tests -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>3.3.0</version>
+                <configuration>
+                    <includes>
+                        <include>**/*Test.java</include>
+                    </includes>
+                </configuration>
+            </plugin>
+        </plugins>
     </build>
 </project>

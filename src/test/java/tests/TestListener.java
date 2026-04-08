@@ -21,7 +21,7 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onStart(ITestContext context) {
-    	// Dynamic path for Extent Report
+        // Dynamic path for Extent Report
         String reportPath = System.getProperty("user.dir") + "/extent-reports/extent-report.html";
         ExtentSparkReporter sparkReporter = new ExtentSparkReporter(reportPath);
         sparkReporter.config().setDocumentTitle("Login Test Report");
@@ -47,22 +47,29 @@ public class TestListener implements ITestListener {
     public void onTestFailure(ITestResult result) {
         test.get().log(Status.FAIL, "Test Failed: " + result.getThrowable());
 
-     // Dynamic path creation for screenshot
         Object currentClass = result.getInstance();
-        WebDriver driver = ((LoginTest) currentClass).getDriver();
-        
-        File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        String screenshotPath = System.getProperty("user.dir") + "/screenshots/" + result.getName() + ".png";
-        
-        try {
-            FileUtils.copyFile(screenshot, new File(screenshotPath));
-            test.get().addScreenCaptureFromPath(screenshotPath, "Screenshot on failure");
-        } catch (IOException e) {
-            test.get().log(Status.FAIL, "Failed to capture screenshot: " + e.getMessage());
+
+        // Ensure the instance is of type BaseTest
+        if (currentClass instanceof BaseTest) {
+            WebDriver driver = ((BaseTest) currentClass).getDriver();
+
+            // Generate screenshot
+            String screenshotsDir = System.getProperty("user.dir") + "/screenshots/";
+            new File(screenshotsDir).mkdirs(); // Ensure directory exists
+            String screenshotPath = screenshotsDir + result.getName() + ".png";
+
+            try {
+                File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+                FileUtils.copyFile(screenshot, new File(screenshotPath));
+                test.get().addScreenCaptureFromPath(screenshotPath, "Screenshot on failure");
+            } catch (IOException e) {
+                test.get().log(Status.FAIL, "Failed to capture screenshot: " + e.getMessage());
+            }
+        } else {
+            test.get().log(Status.FAIL, "Failed to retrieve WebDriver instance for screenshot.");
         }
     }
-    
-    
+
     @Override
     public void onTestSkipped(ITestResult result) {
         test.get().log(Status.SKIP, "Test Skipped");
@@ -70,6 +77,8 @@ public class TestListener implements ITestListener {
 
     @Override
     public void onFinish(ITestContext context) {
-        extent.flush();  //  Closes the Extent report and writes to the file
+        if (extent != null) {
+            extent.flush(); // Close the Extent report and write to the file
+        }
     }
 }

@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 3 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 5 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">19 methods, 3 failed,   16 passed</span>
+                    <span class="method-stats">22 methods, 5 failed,   17 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -108,12 +108,22 @@
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.SearchTest" class="method navigator-link" hash-for-method="testEmptySearch">testEmptySearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.SearchTest" class="method navigator-link" hash-for-method="testInvalidSearch">testInvalidSearch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testMaxPasswordLength">testMaxPasswordLength</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testMobileResponsiveDesign">testMobileResponsiveDesign</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.SearchTest" class="method navigator-link" hash-for-method="testValidSearch">testValidSearch</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Surefire_suite -->
@@ -147,7 +157,7 @@
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testInvalidEmailValidPassworld">testInvalidEmailValidPassworld</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testInvalidEmailValidPassword">testInvalidEmailValidPassword</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -168,6 +178,11 @@
                       <span>
                         <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testMinPasswordLength">testMinPasswordLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Surefire_suite" title="tests.LoginTest" class="method navigator-link" hash-for-method="testMobileResponsiveDesign">testMobileResponsiveDesign</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -220,6 +235,119 @@
           <div class="suite-Surefire_suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
+              <span class="class-name">tests.SearchTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptySearch">
+                  </a> <!-- testEmptySearch -->
+                  <span class="method-name">testEmptySearch</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Slažem se&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [22bde15b7c38de944354de4f694f7074, findElement {using=xpath, value=//button[text()=&apos;Slažem se&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52687}, goog:processID: 23532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52687/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 22bde15b7c38de944354de4f694f7074
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at dragan.stojilkovic.Pages.LoginPage.acceptCookies(LoginPage.java:103)
+	at tests.SearchTest.testEmptySearch(SearchTest.java:28)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testInvalidSearch">
+                  </a> <!-- testInvalidSearch -->
+                  <span class="method-name">testInvalidSearch</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Slažem se&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [3a233a98ce0f62319523c92e9075f579, findElement {using=xpath, value=//button[text()=&apos;Slažem se&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52933}, goog:processID: 15412, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52933/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 3a233a98ce0f62319523c92e9075f579
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at dragan.stojilkovic.Pages.LoginPage.acceptCookies(LoginPage.java:103)
+	at tests.SearchTest.testInvalidSearch(SearchTest.java:43)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidSearch">
+                  </a> <!-- testValidSearch -->
+                  <span class="method-name">testValidSearch</span>
+                  <div class="stack-trace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//button[text()=&apos;Slažem se&apos;]&quot;}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.27.0&apos;, revision: &apos;d6e718d134&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [5f235d387abaead022a818850778616f, findElement {using=xpath, value=//button[text()=&apos;Slažem se&apos;]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53209}, goog:processID: 20264, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53209/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 5f235d387abaead022a818850778616f
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
+	at dragan.stojilkovic.Pages.LoginPage.acceptCookies(LoginPage.java:103)
+	at tests.SearchTest.testValidSearch(SearchTest.java:13)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Surefire_suite-class-failed -->
+          <div class="suite-Surefire_suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
               <span class="class-name">tests.LoginTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
@@ -229,7 +357,7 @@
                   </a> <!-- testAccountLockoutAfterFailedAttempts -->
                   <span class="method-name">testAccountLockoutAfterFailedAttempts</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [Nalog je zaključan zbog više neuspešnih pokušaja.] but found [Email ili lozinka nisu u redu.]
-	at tests.LoginTest.testAccountLockoutAfterFailedAttempts(LoginTest.java:256)
+	at tests.LoginTest.testAccountLockoutAfterFailedAttempts(LoginTest.java:104)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 38 stack frames
 </div> <!-- stack-trace -->
@@ -241,42 +369,9 @@
                   </a> <!-- testMaxPasswordLength -->
                   <span class="method-name">testMaxPasswordLength</span>
                   <div class="stack-trace">java.lang.AssertionError: expected [Password too long.] but found [Email ili lozinka nisu u redu.]
-	at tests.LoginTest.testMaxPasswordLength(LoginTest.java:205)
+	at tests.LoginTest.testMaxPasswordLength(LoginTest.java:81)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 38 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testMobileResponsiveDesign">
-                  </a> <!-- testMobileResponsiveDesign -->
-                  <span class="method-name">testMobileResponsiveDesign</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button width=&quot;100%&quot; type=&quot;submit&quot; id=&quot;login-submit&quot; class=&quot;sc-1vt7mai-0 ddzlTv&quot;&gt;...&lt;/button&gt; is not clickable at point (241, 443). Other element would receive the click: &lt;img src=&quot;https://qa-ananasrs.sales-snap.com/asset/8:daily-dealpng&quot; alt=&quot;daily deal&quot; style=&quot;width: 100%; margin-top: -23px;&quot;&gt;
-  (Session info: chrome=129.0.6668.101)
-Build info: version: &apos;4.25.0&apos;, revision: &apos;8a8aea2337&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.10&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [edbbcc7a2098a16634a52924d2a38013, clickElement {id=f.9FB51308EA04DEB637D2CCA72A3ADAEA.d.53D42398761597DFA133AE13756A4EE5.e.15}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 129.0.6668.101, chrome: {chromedriverVersion: 129.0.6668.100 (cf58cba358d..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53287}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53287/devtoo..., se:cdpVersion: 129.0.6668.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (edbbcc7a2098a16634a52924d2a38013)] -&gt; xpath: //button[@id=&apos;login-submit&apos;]]
-Session ID: edbbcc7a2098a16634a52924d2a38013
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-	at dragan.stojilkovic.Pages.LoginPage.clickLogin(LoginPage.java:85)
-	at dragan.stojilkovic.Pages.LoginPage.login(LoginPage.java:92)
-	at tests.LoginTest.testMobileResponsiveDesign(LoginTest.java:346)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 40 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -318,9 +413,9 @@ Session ID: edbbcc7a2098a16634a52924d2a38013
               </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
-                  <a name="testInvalidEmailValidPassworld">
-                  </a> <!-- testInvalidEmailValidPassworld -->
-                  <span class="method-name">testInvalidEmailValidPassworld</span>
+                  <a name="testInvalidEmailValidPassword">
+                  </a> <!-- testInvalidEmailValidPassword -->
+                  <span class="method-name">testInvalidEmailValidPassword</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -349,6 +444,13 @@ Session ID: edbbcc7a2098a16634a52924d2a38013
                   <a name="testMinPasswordLength">
                   </a> <!-- testMinPasswordLength -->
                   <span class="method-name">testMinPasswordLength</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testMobileResponsiveDesign">
+                  </a> <!-- testMobileResponsiveDesign -->
+                  <span class="method-name">testMobileResponsiveDesign</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -413,7 +515,9 @@ Session ID: edbbcc7a2098a16634a52924d2a38013
 &lt;suite name=&quot;Surefire suite&quot; verbose=&quot;0&quot;&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Surefire test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
+      &lt;class name=&quot;tests.BaseTest&quot;/&gt;
       &lt;class name=&quot;tests.LoginTest&quot;/&gt;
+      &lt;class name=&quot;tests.SearchTest&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Surefire test --&gt;
 &lt;/suite&gt; &lt;!-- Surefire suite --&gt;
@@ -427,7 +531,7 @@ Session ID: edbbcc7a2098a16634a52924d2a38013
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Surefire test (1 class)</span>
+                <span class="test-name">Surefire test (3 classes)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -453,88 +557,100 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(19);
+data.addRows(22);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testValidLogin')
+data.setCell(0, 1, 'testValidLoginTwoCharactersName')
 data.setCell(0, 2, 'tests.LoginTest')
-data.setCell(0, 3, 8497);
+data.setCell(0, 3, 4037);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMobileResponsiveDesign')
+data.setCell(1, 1, 'testAccountLockoutAfterFailedAttempts')
 data.setCell(1, 2, 'tests.LoginTest')
-data.setCell(1, 3, 4278);
+data.setCell(1, 3, 2846);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testAccountLockoutAfterFailedAttempts')
+data.setCell(2, 1, 'testMaxPasswordLength')
 data.setCell(2, 2, 'tests.LoginTest')
-data.setCell(2, 3, 4064);
+data.setCell(2, 3, 2783);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testValidLoginTwoCharactersName')
+data.setCell(3, 1, 'testValidLogin')
 data.setCell(3, 2, 'tests.LoginTest')
-data.setCell(3, 3, 3705);
+data.setCell(3, 3, 1963);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testTabletResponsiveDesign')
+data.setCell(4, 1, 'testInvalidLogin_MixedCredentials')
 data.setCell(4, 2, 'tests.LoginTest')
-data.setCell(4, 3, 3351);
+data.setCell(4, 3, 1440);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testMaxPasswordLength')
+data.setCell(5, 1, 'testInvalidPassword')
 data.setCell(5, 2, 'tests.LoginTest')
-data.setCell(5, 3, 3037);
+data.setCell(5, 3, 1415);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'testMinPasswordLength')
+data.setCell(6, 1, 'testMobileResponsiveDesign')
 data.setCell(6, 2, 'tests.LoginTest')
-data.setCell(6, 3, 3013);
+data.setCell(6, 3, 1329);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'testSQLInjection')
+data.setCell(7, 1, 'testInvalidEmailValidPassword')
 data.setCell(7, 2, 'tests.LoginTest')
-data.setCell(7, 3, 2990);
+data.setCell(7, 3, 1298);
 data.setCell(8, 0, 8)
-data.setCell(8, 1, 'testSpecialCharactersInEmailAddress')
+data.setCell(8, 1, 'testTabletResponsiveDesign')
 data.setCell(8, 2, 'tests.LoginTest')
-data.setCell(8, 3, 2927);
+data.setCell(8, 3, 1273);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'testXSSInUsername')
+data.setCell(9, 1, 'testMinPasswordLength')
 data.setCell(9, 2, 'tests.LoginTest')
-data.setCell(9, 3, 2594);
+data.setCell(9, 3, 867);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'testInvalidEmail_MissingAtSymbol')
 data.setCell(10, 2, 'tests.LoginTest')
-data.setCell(10, 3, 2083);
+data.setCell(10, 3, 860);
 data.setCell(11, 0, 11)
-data.setCell(11, 1, 'testPasswordBoundary_SevenCharacters')
+data.setCell(11, 1, 'testXSSInUsername')
 data.setCell(11, 2, 'tests.LoginTest')
-data.setCell(11, 3, 2075);
+data.setCell(11, 3, 834);
 data.setCell(12, 0, 12)
-data.setCell(12, 1, 'testInvalidEmailValidPassworld')
+data.setCell(12, 1, 'testPasswordBoundary_SevenCharacters')
 data.setCell(12, 2, 'tests.LoginTest')
-data.setCell(12, 3, 2059);
+data.setCell(12, 3, 832);
 data.setCell(13, 0, 13)
-data.setCell(13, 1, 'testInvalidPassword')
+data.setCell(13, 1, 'testForgotPasswordLink')
 data.setCell(13, 2, 'tests.LoginTest')
-data.setCell(13, 3, 1998);
+data.setCell(13, 3, 792);
 data.setCell(14, 0, 14)
-data.setCell(14, 1, 'testInvalidLogin_MixedCredentials')
+data.setCell(14, 1, 'testInvalidEmailFormat')
 data.setCell(14, 2, 'tests.LoginTest')
-data.setCell(14, 3, 1979);
+data.setCell(14, 3, 773);
 data.setCell(15, 0, 15)
-data.setCell(15, 1, 'testInvalidEmailFormat')
+data.setCell(15, 1, 'testSQLInjection')
 data.setCell(15, 2, 'tests.LoginTest')
-data.setCell(15, 3, 1468);
+data.setCell(15, 3, 750);
 data.setCell(16, 0, 16)
-data.setCell(16, 1, 'testEmptyEmailField')
+data.setCell(16, 1, 'testSpecialCharactersInEmailAddress')
 data.setCell(16, 2, 'tests.LoginTest')
-data.setCell(16, 3, 1448);
+data.setCell(16, 3, 691);
 data.setCell(17, 0, 17)
-data.setCell(17, 1, 'testForgotPasswordLink')
+data.setCell(17, 1, 'testEmptyEmailField')
 data.setCell(17, 2, 'tests.LoginTest')
-data.setCell(17, 3, 1300);
+data.setCell(17, 3, 626);
 data.setCell(18, 0, 18)
 data.setCell(18, 1, 'testEmptyFields')
 data.setCell(18, 2, 'tests.LoginTest')
-data.setCell(18, 3, 1028);
+data.setCell(18, 3, 383);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'testEmptySearch')
+data.setCell(19, 2, 'tests.SearchTest')
+data.setCell(19, 3, 97);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'testInvalidSearch')
+data.setCell(20, 2, 'tests.SearchTest')
+data.setCell(20, 3, 24);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'testValidSearch')
+data.setCell(21, 2, 'tests.SearchTest')
+data.setCell(21, 3, 23);
 window.suiteTableData['Surefire_suite']= { tableData: data, tableDiv: 'times-div-Surefire_suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 53 seconds</span>
+              <span class="suite-total-time">Total running time: 25 seconds</span>
               <div id="times-div-Surefire_suite">
               </div> <!-- times-div-Surefire_suite -->
             </div> <!-- times-div -->
@@ -569,231 +685,274 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testAccountLockoutAfterFailedAttempts</span>
-                <span class="method-start">3839 ms</span>
+                <span class="method-start">7347 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">8097 ms</span>
+                <span class="method-start">10409 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">8304 ms</span>
+                <span class="method-start">10742 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testEmptyEmailField</span>
-                <span class="method-start">11015 ms</span>
+                <span class="method-start">16458 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">12464 ms</span>
+                <span class="method-start">17085 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">12652 ms</span>
+                <span class="method-start">17325 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testEmptyFields</span>
-                <span class="method-start">14923 ms</span>
+                <span class="method-start">22948 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">15952 ms</span>
+                <span class="method-start">23332 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">16100 ms</span>
+                <span class="method-start">25113 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testForgotPasswordLink</span>
-                <span class="method-start">18422 ms</span>
+                <span class="method-start">30981 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">19723 ms</span>
+                <span class="method-start">31776 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">19921 ms</span>
+                <span class="method-start">32009 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testInvalidEmailFormat</span>
-                <span class="method-start">22241 ms</span>
+                <span class="method-start">37562 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">23709 ms</span>
+                <span class="method-start">38336 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">23907 ms</span>
+                <span class="method-start">38600 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testInvalidEmailValidPassworld</span>
-                <span class="method-start">26089 ms</span>
+                <span class="method-name">testInvalidEmailValidPassword</span>
+                <span class="method-start">44268 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">28149 ms</span>
+                <span class="method-start">45567 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">28451 ms</span>
+                <span class="method-start">45871 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testInvalidEmail_MissingAtSymbol</span>
-                <span class="method-start">30694 ms</span>
+                <span class="method-start">51489 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">32777 ms</span>
+                <span class="method-start">52349 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">32970 ms</span>
+                <span class="method-start">52620 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testInvalidLogin_MixedCredentials</span>
-                <span class="method-start">35127 ms</span>
+                <span class="method-start">58221 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">37107 ms</span>
+                <span class="method-start">59661 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">37317 ms</span>
+                <span class="method-start">59982 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testInvalidPassword</span>
-                <span class="method-start">39550 ms</span>
+                <span class="method-start">65814 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">41549 ms</span>
+                <span class="method-start">67230 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">41758 ms</span>
+                <span class="method-start">67532 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">testMaxPasswordLength</span>
-                <span class="method-start">43890 ms</span>
+                <span class="method-start">73271 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">47104 ms</span>
+                <span class="method-start">76192 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">47299 ms</span>
+                <span class="method-start">76502 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testMinPasswordLength</span>
-                <span class="method-start">49609 ms</span>
+                <span class="method-start">82232 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">52623 ms</span>
+                <span class="method-start">83101 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">52877 ms</span>
+                <span class="method-start">83372 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testMobileResponsiveDesign</span>
+                <span class="method-start">89157 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">90486 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">90748 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testPasswordBoundary_SevenCharacters</span>
+                <span class="method-start">96347 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">97179 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">97451 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSQLInjection</span>
+                <span class="method-start">103171 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">103921 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">104186 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testSpecialCharactersInEmailAddress</span>
+                <span class="method-start">109972 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">110664 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">110919 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testTabletResponsiveDesign</span>
+                <span class="method-start">116708 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">117982 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">118239 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testValidLogin</span>
+                <span class="method-start">123859 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">125823 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">126152 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testValidLoginTwoCharactersName</span>
+                <span class="method-start">131692 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">135729 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">135963 ms</span>
+              </div> <!-- configuration-method before -->
+              <div class="test-method">
+                <span class="method-name">testXSSInUsername</span>
+                <span class="method-start">141490 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">142324 ms</span>
+              </div> <!-- configuration-method after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">tests.SearchTest</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">setUp(chrome)</span>
+                <span class="method-start">142574 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testMobileResponsiveDesign</span>
-                <span class="method-start">55162 ms</span>
+                <span class="method-name">testEmptySearch</span>
+                <span class="method-start">148087 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">59537 ms</span>
+                <span class="method-start">148333 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">59797 ms</span>
+                <span class="method-start">148555 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testPasswordBoundary_SevenCharacters</span>
-                <span class="method-start">62268 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testInvalidSearch</span>
+                <span class="method-start">154479 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">64345 ms</span>
+                <span class="method-start">154679 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
                 <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">64548 ms</span>
+                <span class="method-start">156458 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testSQLInjection</span>
-                <span class="method-start">66779 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testValidSearch</span>
+                <span class="method-start">162299 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">69769 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">70013 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testSpecialCharactersInEmailAddress</span>
-                <span class="method-start">72470 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">75398 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">75617 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testTabletResponsiveDesign</span>
-                <span class="method-start">77915 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">81267 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">81429 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testValidLogin</span>
-                <span class="method-start">84019 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">92517 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">92728 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testValidLoginTwoCharactersName</span>
-                <span class="method-start">94942 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">98648 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">setUp(chrome)</span>
-                <span class="method-start">98868 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testXSSInUsername</span>
-                <span class="method-start">101147 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">tearDown</span>
-                <span class="method-start">103742 ms</span>
+                <span class="method-start">162486 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

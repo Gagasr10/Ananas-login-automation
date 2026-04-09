@@ -33,8 +33,6 @@ public class SearchBar {
     public void search(String text) {
         log.info("Searching for: {}", text);
         closePopupIfPresent();
-
-        // Try multiple locators for the search input
         WebElement searchInput = findSearchInput();
         searchInput.clear();
         searchInput.sendKeys(text);

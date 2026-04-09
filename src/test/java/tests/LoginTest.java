@@ -85,7 +85,7 @@ public class LoginTest extends BaseTest {
 
     @Test(dataProvider = "invalidLoginCombos")
     public void testInvalidLoginCombinations(String email, String password, String expectedError) {
-        // In CI, the password error element is not reliably found – skip this specific case
+        // Skip empty password case in CI because error element not reliable
         if (isRunningInCI() && password.isEmpty()) {
             throw new SkipException("Skipped in CI: password error element not reliable");
         }

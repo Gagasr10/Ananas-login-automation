@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="20" passed="13" failed="7" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-08T21:57:28 CEST" name="Default suite" finished-at="2026-04-08T21:58:23 CEST" duration-ms="54676">
+  <suite started-at="2026-04-09T10:36:59 CEST" name="Default suite" finished-at="2026-04-09T10:39:47 CEST" duration-ms="168026">
     <groups>
     </groups>
-    <test started-at="2026-04-08T21:57:28 CEST" name="Default test" finished-at="2026-04-08T21:58:23 CEST" duration-ms="54676">
-      <class name="tests.SearchTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:57:29 CEST" name="setUp" finished-at="2026-04-08T21:57:37 CEST" duration-ms="7745" status="PASS">
+    <test started-at="2026-04-09T10:36:59 CEST" name="Default test" finished-at="2026-04-09T10:39:47 CEST" duration-ms="168026">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:36:59 CEST" name="setUp" finished-at="2026-04-09T10:37:08 CEST" duration-ms="8764" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,59 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testEmptySearch()[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:57:37 CEST" name="testEmptySearch" finished-at="2026-04-08T21:57:50 CEST" duration-ms="12769" status="PASS">
+        <test-method signature="testAccountLockoutAfterFailedAttempts()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:08 CEST" name="testAccountLockoutAfterFailedAttempts" finished-at="2026-04-09T10:37:11 CEST" duration-ms="3042" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Nalog je zaključan zbog više neuspešnih pokušaja.] but found [Email ili lozinka nisu u redu.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Nalog je zaključan zbog više neuspešnih pokušaja.] but found [Email ili lozinka nisu u redu.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at tests.LoginTest.testAccountLockoutAfterFailedAttempts(LoginTest.java:144)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testEmptySearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:57:50 CEST" name="tearDown" finished-at="2026-04-08T21:57:50 CEST" duration-ms="380" status="PASS">
+        </test-method> <!-- testAccountLockoutAfterFailedAttempts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:11 CEST" name="tearDown" finished-at="2026-04-09T10:37:11 CEST" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:57:50 CEST" name="setUp" finished-at="2026-04-08T21:57:56 CEST" duration-ms="5871" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:11 CEST" name="setUp" finished-at="2026-04-09T10:37:22 CEST" duration-ms="10762" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -37,15 +81,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidSearch()[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:57:56 CEST" name="testInvalidSearch" finished-at="2026-04-08T21:58:11 CEST" duration-ms="15182" status="PASS">
+        <test-method signature="testEmptyEmailField()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:22 CEST" name="testEmptyEmailField" finished-at="2026-04-09T10:37:23 CEST" duration-ms="664" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testInvalidSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:58:11 CEST" name="tearDown" finished-at="2026-04-08T21:58:11 CEST" duration-ms="310" status="PASS">
+        </test-method> <!-- testEmptyEmailField -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:23 CEST" name="tearDown" finished-at="2026-04-09T10:37:23 CEST" duration-ms="275" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:58:11 CEST" name="setUp" finished-at="2026-04-08T21:58:17 CEST" duration-ms="6070" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:23 CEST" name="setUp" finished-at="2026-04-09T10:37:30 CEST" duration-ms="6699" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -56,15 +100,829 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidSearch()[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:58:17 CEST" name="testValidSearch" finished-at="2026-04-08T21:58:23 CEST" duration-ms="5430" status="PASS">
+        <test-method signature="testEmptyFields()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:30 CEST" name="testEmptyFields" finished-at="2026-04-09T10:37:30 CEST" duration-ms="351" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testValidSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@6e20b53a]" started-at="2026-04-08T21:58:23 CEST" name="tearDown" finished-at="2026-04-08T21:58:23 CEST" duration-ms="313" status="PASS">
+        </test-method> <!-- testEmptyFields -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:30 CEST" name="tearDown" finished-at="2026-04-09T10:37:30 CEST" duration-ms="274" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- tests.SearchTest -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:30 CEST" name="setUp" finished-at="2026-04-09T10:37:37 CEST" duration-ms="6603" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testForgotPasswordLink()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:37 CEST" name="testForgotPasswordLink" finished-at="2026-04-09T10:37:38 CEST" duration-ms="687" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPasswordLink -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:38 CEST" name="tearDown" finished-at="2026-04-09T10:37:38 CEST" duration-ms="261" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:38 CEST" name="setUp" finished-at="2026-04-09T10:37:45 CEST" duration-ms="6876" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidEmailFormats(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:45 CEST" name="testInvalidEmailFormats" data-provider="invalidEmailFormats" finished-at="2026-04-09T10:37:46 CEST" duration-ms="661" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[!@#$%^&*()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Email adresa nije ispravna.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailFormats -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:46 CEST" name="tearDown" finished-at="2026-04-09T10:37:46 CEST" duration-ms="269" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:46 CEST" name="setUp" finished-at="2026-04-09T10:37:52 CEST" duration-ms="6548" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidEmailFormats(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:52 CEST" name="testInvalidEmailFormats" data-provider="invalidEmailFormats" finished-at="2026-04-09T10:37:53 CEST" duration-ms="756" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wanaxa5524@craftapkcom]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Email adresa nije ispravna.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailFormats -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:53 CEST" name="tearDown" finished-at="2026-04-09T10:37:53 CEST" duration-ms="284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:37:53 CEST" name="setUp" finished-at="2026-04-09T10:38:00 CEST" duration-ms="6417" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidEmailFormats(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:00 CEST" name="testInvalidEmailFormats" data-provider="invalidEmailFormats" finished-at="2026-04-09T10:38:01 CEST" duration-ms="694" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wanaxa5524craftapk.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Email adresa nije ispravna.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailFormats -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:01 CEST" name="tearDown" finished-at="2026-04-09T10:38:01 CEST" duration-ms="302" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:01 CEST" name="setUp" finished-at="2026-04-09T10:38:08 CEST" duration-ms="6707" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidEmailFormats(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:08 CEST" name="testInvalidEmailFormats" data-provider="invalidEmailFormats" finished-at="2026-04-09T10:38:08 CEST" duration-ms="649" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[' OR 1=1 --]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Email adresa nije ispravna.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailFormats -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:08 CEST" name="tearDown" finished-at="2026-04-09T10:38:08 CEST" duration-ms="288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:08 CEST" name="setUp" finished-at="2026-04-09T10:38:15 CEST" duration-ms="6590" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidEmailFormats(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:15 CEST" name="testInvalidEmailFormats" data-provider="invalidEmailFormats" finished-at="2026-04-09T10:38:16 CEST" duration-ms="719" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[<script>alert('XSS')</script>]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Email adresa nije ispravna.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidEmailFormats -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:16 CEST" name="tearDown" finished-at="2026-04-09T10:38:16 CEST" duration-ms="268" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:16 CEST" name="setUp" finished-at="2026-04-09T10:38:22 CEST" duration-ms="6404" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidLoginCombinations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:22 CEST" name="testInvalidLoginCombinations" data-provider="invalidLoginCombos" finished-at="2026-04-09T10:38:24 CEST" duration-ms="1787" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wanaxa5524@craftapk.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[wrongPass]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Email ili lozinka nisu u redu.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLoginCombinations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:24 CEST" name="tearDown" finished-at="2026-04-09T10:38:25 CEST" duration-ms="307" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:25 CEST" name="setUp" finished-at="2026-04-09T10:38:31 CEST" duration-ms="6671" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidLoginCombinations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:31 CEST" name="testInvalidLoginCombinations" data-provider="invalidLoginCombos" finished-at="2026-04-09T10:38:33 CEST" duration-ms="1440" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[invalid@example.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John1000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Email ili lozinka nisu u redu.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLoginCombinations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:33 CEST" name="tearDown" finished-at="2026-04-09T10:38:33 CEST" duration-ms="301" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:33 CEST" name="setUp" finished-at="2026-04-09T10:38:39 CEST" duration-ms="6371" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidLoginCombinations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:39 CEST" name="testInvalidLoginCombinations" data-provider="invalidLoginCombos" finished-at="2026-04-09T10:38:40 CEST" duration-ms="572" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John1000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ovo polje je obavezno.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLoginCombinations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:40 CEST" name="tearDown" finished-at="2026-04-09T10:38:40 CEST" duration-ms="294" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:40 CEST" name="setUp" finished-at="2026-04-09T10:38:48 CEST" duration-ms="7469" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testInvalidLoginCombinations(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:48 CEST" name="testInvalidLoginCombinations" data-provider="invalidLoginCombos" finished-at="2026-04-09T10:38:48 CEST" duration-ms="660" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wanaxa5524@craftapk.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ovo polje je obavezno.]]>
+              </value>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"(//p[contains(@class, 'Mui-error')])[2]"}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b70fe66878d2410bb6b4db3c9974e482, findElement {value=(//p[contains(@class, 'Mui-error')])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60843}, goog:processID: 29164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60843/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b70fe66878d2410bb6b4db3c9974e482]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"(//p[contains(@class, 'Mui-error')])[2]"}
+  (Session info: chrome=146.0.7680.178)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.27.0', revision: 'd6e718d134'
+System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [b70fe66878d2410bb6b4db3c9974e482, findElement {value=(//p[contains(@class, 'Mui-error')])[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60843}, goog:processID: 29164, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60843/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b70fe66878d2410bb6b4db3c9974e482
+at jdk.internal.reflect.GeneratedConstructorAccessor24.newInstance(Unknown Source)
+at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy32.getText(Unknown Source)
+at dragan.stojilkovic.Pages.LoginPage.getPasswordErrorMessage(LoginPage.java:102)
+at tests.LoginTest.testInvalidLoginCombinations(LoginTest.java:84)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLoginCombinations -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:48 CEST" name="tearDown" finished-at="2026-04-09T10:38:49 CEST" duration-ms="308" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:49 CEST" name="setUp" finished-at="2026-04-09T10:38:55 CEST" duration-ms="6450" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testMaxPasswordLength()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:55 CEST" name="testMaxPasswordLength" finished-at="2026-04-09T10:38:58 CEST" duration-ms="2756" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [Password too long.] but found [Email ili lozinka nisu u redu.]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [Password too long.] but found [Email ili lozinka nisu u redu.]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertEqualsImpl(Assert.java:140)
+at org.testng.Assert.assertEquals(Assert.java:122)
+at org.testng.Assert.assertEquals(Assert.java:629)
+at org.testng.Assert.assertEquals(Assert.java:639)
+at tests.LoginTest.testMaxPasswordLength(LoginTest.java:125)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testMaxPasswordLength -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:58 CEST" name="tearDown" finished-at="2026-04-09T10:38:58 CEST" duration-ms="278" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:38:58 CEST" name="setUp" finished-at="2026-04-09T10:39:05 CEST" duration-ms="6470" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPasswordLengthBoundary(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:05 CEST" name="testPasswordLengthBoundary" data-provider="passwordLengthBoundary" finished-at="2026-04-09T10:39:06 CEST" duration-ms="674" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[a]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Minimum 8 karaktera.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordLengthBoundary -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:06 CEST" name="tearDown" finished-at="2026-04-09T10:39:06 CEST" duration-ms="256" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:06 CEST" name="setUp" finished-at="2026-04-09T10:39:12 CEST" duration-ms="6486" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPasswordLengthBoundary(java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:12 CEST" name="testPasswordLengthBoundary" data-provider="passwordLengthBoundary" finished-at="2026-04-09T10:39:13 CEST" duration-ms="739" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[abcdefg]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Minimum 8 karaktera.]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordLengthBoundary -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:13 CEST" name="tearDown" finished-at="2026-04-09T10:39:13 CEST" duration-ms="248" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:13 CEST" name="setUp" finished-at="2026-04-09T10:39:21 CEST" duration-ms="8068" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResponsiveDesign(int,int)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:21 CEST" name="testResponsiveDesign" data-provider="responsiveDesignSizes" finished-at="2026-04-09T10:39:23 CEST" duration-ms="1349" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[375]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[812]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[URL after successful login on responsive design should be the homepage expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: URL after successful login on responsive design should be the homepage expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at tests.LoginTest.testResponsiveDesign(LoginTest.java:162)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResponsiveDesign -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:23 CEST" name="tearDown" finished-at="2026-04-09T10:39:23 CEST" duration-ms="366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:23 CEST" name="setUp" finished-at="2026-04-09T10:39:30 CEST" duration-ms="6494" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testResponsiveDesign(int,int)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:30 CEST" name="testResponsiveDesign" data-provider="responsiveDesignSizes" finished-at="2026-04-09T10:39:31 CEST" duration-ms="1198" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[1024]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[1366]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[URL after successful login on responsive design should be the homepage expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: URL after successful login on responsive design should be the homepage expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at tests.LoginTest.testResponsiveDesign(LoginTest.java:162)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testResponsiveDesign -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:31 CEST" name="tearDown" finished-at="2026-04-09T10:39:31 CEST" duration-ms="363" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:31 CEST" name="setUp" finished-at="2026-04-09T10:39:38 CEST" duration-ms="6536" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:38 CEST" name="testValidLogin" data-provider="validLoginData" finished-at="2026-04-09T10:39:39 CEST" duration-ms="712" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[wanaxa5524@craftapk.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[John1000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[John]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[URL after successful login should be the homepage expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: URL after successful login should be the homepage expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at tests.LoginTest.testValidLogin(LoginTest.java:71)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:39 CEST" name="tearDown" finished-at="2026-04-09T10:39:39 CEST" duration-ms="284" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:39 CEST" name="setUp" finished-at="2026-04-09T10:39:46 CEST" duration-ms="6538" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidLogin(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:46 CEST" name="testValidLogin" data-provider="validLoginData" finished-at="2026-04-09T10:39:46 CEST" duration-ms="716" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[ub4r3t474c@flashpost.net]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[EdCA1000]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Ed]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[URL after successful login should be the homepage expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: URL after successful login should be the homepage expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:99)
+at org.testng.Assert.failNotEquals(Assert.java:1037)
+at org.testng.Assert.assertTrue(Assert.java:45)
+at tests.LoginTest.testValidLogin(LoginTest.java:71)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@61e94def]" started-at="2026-04-09T10:39:46 CEST" name="tearDown" finished-at="2026-04-09T10:39:47 CEST" duration-ms="241" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- tests.LoginTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

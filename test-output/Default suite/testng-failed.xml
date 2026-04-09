@@ -3,13 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.SearchTest">
+      <class name="tests.LoginTest">
         <methods>
-          <include name="testValidSearch"/>
+          <include name="testValidLogin" invocation-numbers="0 1"/>
+          <include name="testResponsiveDesign" invocation-numbers="0 1"/>
+          <include name="testAccountLockoutAfterFailedAttempts"/>
+          <include name="testInvalidLoginCombinations" invocation-numbers="3"/>
+          <include name="testMaxPasswordLength"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- tests.SearchTest -->
+      </class> <!-- tests.LoginTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dragan.stojilkovic</groupId>
-    <artifactId>Ananas-login-tests</artifactId>
+    <artifactId>ananas-login-tests</artifactId>
     <version>0.0.1-SNAPSHOT</version>
 
     <name>ananas-login-tests</name>
@@ -39,11 +39,30 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- ExtentReports - reporting (single version) -->
+        <!-- ExtentReports - reporting -->
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
             <version>5.1.2</version>
+        </dependency>
+
+        <!-- Log4j2 for professional logging -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-api</artifactId>
+            <version>2.23.1</version>
+        </dependency>
+
+        <!-- Apache Commons Lang for utilities -->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.14.0</version>
         </dependency>
     </dependencies>
 

@@ -3,15 +3,6 @@
 <suite name="Failed suite [Surefire suite]" verbose="0">
   <test thread-count="5" name="Surefire test(failed)" verbose="0">
     <classes>
-      <class name="tests.SearchTest">
-        <methods>
-          <include name="testEmptySearch"/>
-          <include name="testValidSearch"/>
-          <include name="tearDown"/>
-          <include name="setUp"/>
-          <include name="testInvalidSearch"/>
-        </methods>
-      </class> <!-- tests.SearchTest -->
       <class name="tests.LoginTest">
         <methods>
           <include name="testAccountLockoutAfterFailedAttempts"/>

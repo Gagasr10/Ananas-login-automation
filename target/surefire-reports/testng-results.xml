@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="22" passed="17" failed="5" skipped="0">
+<testng-results ignored="0" total="22" passed="20" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-08T20:56:30 CEST" name="Surefire suite" finished-at="2026-04-08T20:59:14 CEST" duration-ms="163297">
+  <suite started-at="2026-04-08T22:37:32 CEST" name="Surefire suite" finished-at="2026-04-08T22:40:53 CEST" duration-ms="201253">
     <groups>
     </groups>
-    <test started-at="2026-04-08T20:56:30 CEST" name="Surefire test" finished-at="2026-04-08T20:59:14 CEST" duration-ms="163297">
+    <test started-at="2026-04-08T22:37:32 CEST" name="Surefire test" finished-at="2026-04-08T22:40:53 CEST" duration-ms="201253">
       <class name="tests.LoginTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:31 CEST" name="setUp" finished-at="2026-04-08T20:56:38 CEST" duration-ms="7345" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:32 CEST" name="setUp" finished-at="2026-04-08T22:37:41 CEST" duration-ms="8539" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testAccountLockoutAfterFailedAttempts()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:38 CEST" name="testAccountLockoutAfterFailedAttempts" finished-at="2026-04-08T20:56:41 CEST" duration-ms="2846" status="FAIL">
+        <test-method signature="testAccountLockoutAfterFailedAttempts()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:41 CEST" name="testAccountLockoutAfterFailedAttempts" finished-at="2026-04-08T22:37:44 CEST" duration-ms="3222" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Nalog je zaključan zbog više neuspešnih pokušaja.] but found [Email ili lozinka nisu u redu.]]]>
@@ -71,11 +71,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testAccountLockoutAfterFailedAttempts -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:41 CEST" name="tearDown" finished-at="2026-04-08T20:56:42 CEST" duration-ms="332" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:44 CEST" name="tearDown" finished-at="2026-04-08T22:37:44 CEST" duration-ms="294" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:42 CEST" name="setUp" finished-at="2026-04-08T20:56:47 CEST" duration-ms="5716" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:44 CEST" name="setUp" finished-at="2026-04-08T22:37:50 CEST" duration-ms="5822" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -86,15 +86,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testEmptyEmailField()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:47 CEST" name="testEmptyEmailField" finished-at="2026-04-08T20:56:48 CEST" duration-ms="626" status="PASS">
+        <test-method signature="testEmptyEmailField()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:50 CEST" name="testEmptyEmailField" finished-at="2026-04-08T22:37:51 CEST" duration-ms="814" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptyEmailField -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:48 CEST" name="tearDown" finished-at="2026-04-08T20:56:48 CEST" duration-ms="240" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:51 CEST" name="tearDown" finished-at="2026-04-08T22:37:51 CEST" duration-ms="281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:48 CEST" name="setUp" finished-at="2026-04-08T20:56:54 CEST" duration-ms="5623" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:51 CEST" name="setUp" finished-at="2026-04-08T22:37:57 CEST" duration-ms="6054" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -105,15 +105,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testEmptyFields()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:54 CEST" name="testEmptyFields" finished-at="2026-04-08T20:56:54 CEST" duration-ms="383" status="PASS">
+        <test-method signature="testEmptyFields()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:57 CEST" name="testEmptyFields" finished-at="2026-04-08T22:37:58 CEST" duration-ms="451" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptyFields -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:54 CEST" name="tearDown" finished-at="2026-04-08T20:56:56 CEST" duration-ms="1780" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:58 CEST" name="tearDown" finished-at="2026-04-08T22:37:58 CEST" duration-ms="247" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:56:56 CEST" name="setUp" finished-at="2026-04-08T20:57:02 CEST" duration-ms="5868" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:37:58 CEST" name="setUp" finished-at="2026-04-08T22:38:04 CEST" duration-ms="5885" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -124,15 +124,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testForgotPasswordLink()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:02 CEST" name="testForgotPasswordLink" finished-at="2026-04-08T20:57:03 CEST" duration-ms="792" status="PASS">
+        <test-method signature="testForgotPasswordLink()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:04 CEST" name="testForgotPasswordLink" finished-at="2026-04-08T22:38:05 CEST" duration-ms="912" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testForgotPasswordLink -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:03 CEST" name="tearDown" finished-at="2026-04-08T20:57:03 CEST" duration-ms="232" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:05 CEST" name="tearDown" finished-at="2026-04-08T22:38:05 CEST" duration-ms="285" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:03 CEST" name="setUp" finished-at="2026-04-08T20:57:08 CEST" duration-ms="5553" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:05 CEST" name="setUp" finished-at="2026-04-08T22:38:12 CEST" duration-ms="7104" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -143,15 +143,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidEmailFormat()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:08 CEST" name="testInvalidEmailFormat" finished-at="2026-04-08T20:57:09 CEST" duration-ms="773" status="PASS">
+        <test-method signature="testInvalidEmailFormat()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:12 CEST" name="testInvalidEmailFormat" finished-at="2026-04-08T22:38:13 CEST" duration-ms="844" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidEmailFormat -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:09 CEST" name="tearDown" finished-at="2026-04-08T20:57:09 CEST" duration-ms="263" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:13 CEST" name="tearDown" finished-at="2026-04-08T22:38:13 CEST" duration-ms="271" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:09 CEST" name="setUp" finished-at="2026-04-08T20:57:15 CEST" duration-ms="5668" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:13 CEST" name="setUp" finished-at="2026-04-08T22:38:19 CEST" duration-ms="5875" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -162,15 +162,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidEmailValidPassword()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:15 CEST" name="testInvalidEmailValidPassword" finished-at="2026-04-08T20:57:16 CEST" duration-ms="1298" status="PASS">
+        <test-method signature="testInvalidEmailValidPassword()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:19 CEST" name="testInvalidEmailValidPassword" finished-at="2026-04-08T22:38:21 CEST" duration-ms="1468" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidEmailValidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:16 CEST" name="tearDown" finished-at="2026-04-08T20:57:17 CEST" duration-ms="302" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:21 CEST" name="tearDown" finished-at="2026-04-08T22:38:21 CEST" duration-ms="341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:17 CEST" name="setUp" finished-at="2026-04-08T20:57:22 CEST" duration-ms="5618" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:21 CEST" name="setUp" finished-at="2026-04-08T22:38:27 CEST" duration-ms="6031" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -181,15 +181,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidEmail_MissingAtSymbol()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:22 CEST" name="testInvalidEmail_MissingAtSymbol" finished-at="2026-04-08T20:57:23 CEST" duration-ms="860" status="PASS">
+        <test-method signature="testInvalidEmail_MissingAtSymbol()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:27 CEST" name="testInvalidEmail_MissingAtSymbol" finished-at="2026-04-08T22:38:28 CEST" duration-ms="930" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidEmail_MissingAtSymbol -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:23 CEST" name="tearDown" finished-at="2026-04-08T20:57:23 CEST" duration-ms="271" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:28 CEST" name="tearDown" finished-at="2026-04-08T22:38:28 CEST" duration-ms="281" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:23 CEST" name="setUp" finished-at="2026-04-08T20:57:29 CEST" duration-ms="5601" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:28 CEST" name="setUp" finished-at="2026-04-08T22:38:34 CEST" duration-ms="5816" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -200,15 +200,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidLogin_MixedCredentials()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:29 CEST" name="testInvalidLogin_MixedCredentials" finished-at="2026-04-08T20:57:31 CEST" duration-ms="1440" status="PASS">
+        <test-method signature="testInvalidLogin_MixedCredentials()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:34 CEST" name="testInvalidLogin_MixedCredentials" finished-at="2026-04-08T22:38:36 CEST" duration-ms="1535" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidLogin_MixedCredentials -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:31 CEST" name="tearDown" finished-at="2026-04-08T20:57:31 CEST" duration-ms="321" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:36 CEST" name="tearDown" finished-at="2026-04-08T22:38:36 CEST" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:31 CEST" name="setUp" finished-at="2026-04-08T20:57:37 CEST" duration-ms="5832" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:36 CEST" name="setUp" finished-at="2026-04-08T22:38:42 CEST" duration-ms="5848" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -219,15 +219,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidPassword()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:37 CEST" name="testInvalidPassword" finished-at="2026-04-08T20:57:38 CEST" duration-ms="1415" status="PASS">
+        <test-method signature="testInvalidPassword()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:42 CEST" name="testInvalidPassword" finished-at="2026-04-08T22:38:43 CEST" duration-ms="1456" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidPassword -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:38 CEST" name="tearDown" finished-at="2026-04-08T20:57:38 CEST" duration-ms="302" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:43 CEST" name="tearDown" finished-at="2026-04-08T22:38:44 CEST" duration-ms="308" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:38 CEST" name="setUp" finished-at="2026-04-08T20:57:44 CEST" duration-ms="5739" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:44 CEST" name="setUp" finished-at="2026-04-08T22:38:50 CEST" duration-ms="6710" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -238,7 +238,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testMaxPasswordLength()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:44 CEST" name="testMaxPasswordLength" finished-at="2026-04-08T20:57:47 CEST" duration-ms="2783" status="FAIL">
+        <test-method signature="testMaxPasswordLength()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:50 CEST" name="testMaxPasswordLength" finished-at="2026-04-08T22:38:53 CEST" duration-ms="2943" status="FAIL">
           <exception class="java.lang.AssertionError">
             <message>
               <![CDATA[expected [Password too long.] but found [Email ili lozinka nisu u redu.]]]>
@@ -291,11 +291,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMaxPasswordLength -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:47 CEST" name="tearDown" finished-at="2026-04-08T20:57:47 CEST" duration-ms="310" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:53 CEST" name="tearDown" finished-at="2026-04-08T22:38:54 CEST" duration-ms="334" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:47 CEST" name="setUp" finished-at="2026-04-08T20:57:53 CEST" duration-ms="5730" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:38:54 CEST" name="setUp" finished-at="2026-04-08T22:39:00 CEST" duration-ms="6286" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -306,15 +306,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testMinPasswordLength()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:53 CEST" name="testMinPasswordLength" finished-at="2026-04-08T20:57:54 CEST" duration-ms="867" status="PASS">
+        <test-method signature="testMinPasswordLength()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:00 CEST" name="testMinPasswordLength" finished-at="2026-04-08T22:39:01 CEST" duration-ms="846" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMinPasswordLength -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:54 CEST" name="tearDown" finished-at="2026-04-08T20:57:54 CEST" duration-ms="271" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:01 CEST" name="tearDown" finished-at="2026-04-08T22:39:01 CEST" duration-ms="290" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:57:54 CEST" name="setUp" finished-at="2026-04-08T20:58:00 CEST" duration-ms="5785" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:01 CEST" name="setUp" finished-at="2026-04-08T22:39:07 CEST" duration-ms="5903" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -325,15 +325,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testMobileResponsiveDesign()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:00 CEST" name="testMobileResponsiveDesign" finished-at="2026-04-08T20:58:01 CEST" duration-ms="1329" status="PASS">
+        <test-method signature="testMobileResponsiveDesign()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:07 CEST" name="testMobileResponsiveDesign" finished-at="2026-04-08T22:39:08 CEST" duration-ms="1460" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testMobileResponsiveDesign -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:01 CEST" name="tearDown" finished-at="2026-04-08T20:58:02 CEST" duration-ms="262" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:08 CEST" name="tearDown" finished-at="2026-04-08T22:39:09 CEST" duration-ms="240" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:02 CEST" name="setUp" finished-at="2026-04-08T20:58:07 CEST" duration-ms="5599" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:09 CEST" name="setUp" finished-at="2026-04-08T22:39:15 CEST" duration-ms="5833" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -344,15 +344,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testPasswordBoundary_SevenCharacters()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:07 CEST" name="testPasswordBoundary_SevenCharacters" finished-at="2026-04-08T20:58:08 CEST" duration-ms="832" status="PASS">
+        <test-method signature="testPasswordBoundary_SevenCharacters()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:15 CEST" name="testPasswordBoundary_SevenCharacters" finished-at="2026-04-08T22:39:16 CEST" duration-ms="958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testPasswordBoundary_SevenCharacters -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:08 CEST" name="tearDown" finished-at="2026-04-08T20:58:08 CEST" duration-ms="272" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:16 CEST" name="tearDown" finished-at="2026-04-08T22:39:16 CEST" duration-ms="304" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:08 CEST" name="setUp" finished-at="2026-04-08T20:58:14 CEST" duration-ms="5720" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:16 CEST" name="setUp" finished-at="2026-04-08T22:39:22 CEST" duration-ms="5973" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -363,15 +363,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSQLInjection()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:14 CEST" name="testSQLInjection" finished-at="2026-04-08T20:58:15 CEST" duration-ms="750" status="PASS">
+        <test-method signature="testSQLInjection()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:22 CEST" name="testSQLInjection" finished-at="2026-04-08T22:39:23 CEST" duration-ms="850" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSQLInjection -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:15 CEST" name="tearDown" finished-at="2026-04-08T20:58:15 CEST" duration-ms="265" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:23 CEST" name="tearDown" finished-at="2026-04-08T22:39:23 CEST" duration-ms="311" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:15 CEST" name="setUp" finished-at="2026-04-08T20:58:21 CEST" duration-ms="5786" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:23 CEST" name="setUp" finished-at="2026-04-08T22:39:29 CEST" duration-ms="5806" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -382,15 +382,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSpecialCharactersInEmailAddress()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:21 CEST" name="testSpecialCharactersInEmailAddress" finished-at="2026-04-08T20:58:22 CEST" duration-ms="691" status="PASS">
+        <test-method signature="testSpecialCharactersInEmailAddress()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:29 CEST" name="testSpecialCharactersInEmailAddress" finished-at="2026-04-08T22:39:30 CEST" duration-ms="776" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSpecialCharactersInEmailAddress -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:22 CEST" name="tearDown" finished-at="2026-04-08T20:58:22 CEST" duration-ms="252" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:30 CEST" name="tearDown" finished-at="2026-04-08T22:39:30 CEST" duration-ms="292" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:22 CEST" name="setUp" finished-at="2026-04-08T20:58:28 CEST" duration-ms="5789" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:30 CEST" name="setUp" finished-at="2026-04-08T22:39:36 CEST" duration-ms="5836" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -401,15 +401,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testTabletResponsiveDesign()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:28 CEST" name="testTabletResponsiveDesign" finished-at="2026-04-08T20:58:29 CEST" duration-ms="1273" status="PASS">
+        <test-method signature="testTabletResponsiveDesign()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:36 CEST" name="testTabletResponsiveDesign" finished-at="2026-04-08T22:39:37 CEST" duration-ms="1406" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testTabletResponsiveDesign -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:29 CEST" name="tearDown" finished-at="2026-04-08T20:58:29 CEST" duration-ms="256" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:37 CEST" name="tearDown" finished-at="2026-04-08T22:39:37 CEST" duration-ms="319" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:29 CEST" name="setUp" finished-at="2026-04-08T20:58:35 CEST" duration-ms="5620" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:37 CEST" name="setUp" finished-at="2026-04-08T22:39:43 CEST" duration-ms="5751" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -420,15 +420,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:35 CEST" name="testValidLogin" finished-at="2026-04-08T20:58:37 CEST" duration-ms="1963" status="PASS">
+        <test-method signature="testValidLogin()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:43 CEST" name="testValidLogin" finished-at="2026-04-08T22:39:45 CEST" duration-ms="2037" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:37 CEST" name="tearDown" finished-at="2026-04-08T20:58:37 CEST" duration-ms="328" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:45 CEST" name="tearDown" finished-at="2026-04-08T22:39:46 CEST" duration-ms="346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:37 CEST" name="setUp" finished-at="2026-04-08T20:58:43 CEST" duration-ms="5539" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:46 CEST" name="setUp" finished-at="2026-04-08T22:39:51 CEST" duration-ms="5967" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -439,15 +439,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidLoginTwoCharactersName()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:43 CEST" name="testValidLoginTwoCharactersName" finished-at="2026-04-08T20:58:47 CEST" duration-ms="4037" status="PASS">
+        <test-method signature="testValidLoginTwoCharactersName()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:51 CEST" name="testValidLoginTwoCharactersName" finished-at="2026-04-08T22:39:54 CEST" duration-ms="2014" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidLoginTwoCharactersName -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:47 CEST" name="tearDown" finished-at="2026-04-08T20:58:47 CEST" duration-ms="233" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:54 CEST" name="tearDown" finished-at="2026-04-08T22:39:54 CEST" duration-ms="361" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:47 CEST" name="setUp" finished-at="2026-04-08T20:58:52 CEST" duration-ms="5527" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:39:54 CEST" name="setUp" finished-at="2026-04-08T22:40:00 CEST" duration-ms="5907" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -458,17 +458,17 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testXSSInUsername()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:52 CEST" name="testXSSInUsername" finished-at="2026-04-08T20:58:53 CEST" duration-ms="834" status="PASS">
+        <test-method signature="testXSSInUsername()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:40:00 CEST" name="testXSSInUsername" finished-at="2026-04-08T22:40:01 CEST" duration-ms="890" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testXSSInUsername -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6580cfdd]" started-at="2026-04-08T20:58:53 CEST" name="tearDown" finished-at="2026-04-08T20:58:53 CEST" duration-ms="246" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.LoginTest@6a28ffa4]" started-at="2026-04-08T22:40:01 CEST" name="tearDown" finished-at="2026-04-08T22:40:01 CEST" duration-ms="269" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- tests.LoginTest -->
       <class name="tests.SearchTest">
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:58:53 CEST" name="setUp" finished-at="2026-04-08T20:58:59 CEST" duration-ms="5513" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:01 CEST" name="setUp" finished-at="2026-04-08T22:40:07 CEST" duration-ms="5866" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -479,93 +479,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testEmptySearch()[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:58:59 CEST" name="testEmptySearch" finished-at="2026-04-08T20:58:59 CEST" duration-ms="97" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Slažem se']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [22bde15b7c38de944354de4f694f7074, findElement {using=xpath, value=//button[text()='Slažem se']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52687}, goog:processID: 23532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52687/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 22bde15b7c38de944354de4f694f7074]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Slažem se']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [22bde15b7c38de944354de4f694f7074, findElement {using=xpath, value=//button[text()='Slažem se']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52687}, goog:processID: 23532, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52687/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 22bde15b7c38de944354de4f694f7074
-at jdk.internal.reflect.GeneratedConstructorAccessor14.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at dragan.stojilkovic.Pages.LoginPage.acceptCookies(LoginPage.java:103)
-at tests.SearchTest.testEmptySearch(SearchTest.java:28)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="testEmptySearch()[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:07 CEST" name="testEmptySearch" finished-at="2026-04-08T22:40:20 CEST" duration-ms="13173" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testEmptySearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:58:59 CEST" name="tearDown" finished-at="2026-04-08T20:58:59 CEST" duration-ms="221" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:20 CEST" name="tearDown" finished-at="2026-04-08T22:40:20 CEST" duration-ms="323" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:58:59 CEST" name="setUp" finished-at="2026-04-08T20:59:05 CEST" duration-ms="5923" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:20 CEST" name="setUp" finished-at="2026-04-08T22:40:27 CEST" duration-ms="6287" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -576,93 +498,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testInvalidSearch()[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:59:05 CEST" name="testInvalidSearch" finished-at="2026-04-08T20:59:05 CEST" duration-ms="24" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Slažem se']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3a233a98ce0f62319523c92e9075f579, findElement {using=xpath, value=//button[text()='Slažem se']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52933}, goog:processID: 15412, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52933/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3a233a98ce0f62319523c92e9075f579]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Slažem se']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [3a233a98ce0f62319523c92e9075f579, findElement {using=xpath, value=//button[text()='Slažem se']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52933}, goog:processID: 15412, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52933/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 3a233a98ce0f62319523c92e9075f579
-at jdk.internal.reflect.GeneratedConstructorAccessor14.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at dragan.stojilkovic.Pages.LoginPage.acceptCookies(LoginPage.java:103)
-at tests.SearchTest.testInvalidSearch(SearchTest.java:43)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="testInvalidSearch()[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:27 CEST" name="testInvalidSearch" finished-at="2026-04-08T22:40:41 CEST" duration-ms="14904" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testInvalidSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:59:06 CEST" name="tearDown" finished-at="2026-04-08T20:59:07 CEST" duration-ms="1779" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:41 CEST" name="tearDown" finished-at="2026-04-08T22:40:42 CEST" duration-ms="358" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:59:07 CEST" name="setUp" finished-at="2026-04-08T20:59:13 CEST" duration-ms="5840" status="PASS">
+        <test-method is-config="true" signature="setUp(java.lang.String)[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:42 CEST" name="setUp" finished-at="2026-04-08T22:40:48 CEST" duration-ms="5691" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -673,89 +517,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testValidSearch()[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:59:13 CEST" name="testValidSearch" finished-at="2026-04-08T20:59:13 CEST" duration-ms="23" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Slažem se']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f235d387abaead022a818850778616f, findElement {using=xpath, value=//button[text()='Slažem se']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53209}, goog:processID: 20264, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53209/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f235d387abaead022a818850778616f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[text()='Slažem se']"}
-  (Session info: chrome=146.0.7680.178)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.27.0', revision: 'd6e718d134'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.10'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [5f235d387abaead022a818850778616f, findElement {using=xpath, value=//button[text()='Slažem se']}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.178, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\Admin\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:53209}, goog:processID: 20264, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:53209/devtoo..., se:cdpVersion: 146.0.7680.178, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 5f235d387abaead022a818850778616f
-at jdk.internal.reflect.GeneratedConstructorAccessor14.newInstance(Unknown Source)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at jdk.proxy2/jdk.proxy2.$Proxy15.click(Unknown Source)
-at dragan.stojilkovic.Pages.LoginPage.acceptCookies(LoginPage.java:103)
-at tests.SearchTest.testValidSearch(SearchTest.java:13)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:686)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:992)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:739)
-at org.testng.TestRunner.run(TestRunner.java:614)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.apache.maven.surefire.testng.TestNGExecutor.run(TestNGExecutor.java:155)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.executeMulti(TestNGDirectoryTestSuite.java:169)
-at org.apache.maven.surefire.testng.TestNGDirectoryTestSuite.execute(TestNGDirectoryTestSuite.java:88)
-at org.apache.maven.surefire.testng.TestNGProvider.invoke(TestNGProvider.java:137)
-at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:385)
-at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:162)
-at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
-at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+        <test-method signature="testValidSearch()[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:48 CEST" name="testValidSearch" finished-at="2026-04-08T22:40:52 CEST" duration-ms="4951" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testValidSearch -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@7e0b85f9]" started-at="2026-04-08T20:59:13 CEST" name="tearDown" finished-at="2026-04-08T20:59:14 CEST" duration-ms="282" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:tests.SearchTest@48ae9b55]" started-at="2026-04-08T22:40:52 CEST" name="tearDown" finished-at="2026-04-08T22:40:53 CEST" duration-ms="314" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

@@ -1,6 +1,5 @@
 package tests;
 
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -78,31 +77,51 @@ public class BaseTest {
         }
     }
 
-    /** Initializes the WebDriver with browser-specific options. */
+    /** Initializes the WebDriver with browser-specific options and headless mode for CI. */
     private void initializeDriver(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOpts = new ChromeOptions();
                 chromeOpts.addArguments("--disable-notifications");
+                // Enable headless mode when running in CI/Docker environment
+                if (isRunningInCI()) {
+                    chromeOpts.addArguments("--headless");
+                    chromeOpts.addArguments("--no-sandbox");
+                    chromeOpts.addArguments("--disable-dev-shm-usage");
+                    log.info("Running Chrome in headless mode (CI environment)");
+                }
                 driver = new ChromeDriver(chromeOpts);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
                 FirefoxOptions firefoxOpts = new FirefoxOptions();
                 firefoxOpts.addPreference("dom.webnotifications.enabled", false);
+                if (isRunningInCI()) {
+                    firefoxOpts.addArguments("--headless");
+                    log.info("Running Firefox in headless mode (CI environment)");
+                }
                 driver = new FirefoxDriver(firefoxOpts);
                 break;
             case "edge":
                 WebDriverManager.edgedriver().setup();
                 EdgeOptions edgeOpts = new EdgeOptions();
                 edgeOpts.addArguments("--disable-notifications");
+                if (isRunningInCI()) {
+                    edgeOpts.addArguments("--headless");
+                    log.info("Running Edge in headless mode (CI environment)");
+                }
                 driver = new EdgeDriver(edgeOpts);
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
         log.info("Initialized {} browser", browser);
+    }
+
+    /** Detects if the tests are running in a CI/Docker environment. */
+    private boolean isRunningInCI() {
+        return "true".equals(System.getenv("CI")) || "true".equals(System.getenv("DOCKER"));
     }
 
     /** Handles cookie consent and popups if present. */

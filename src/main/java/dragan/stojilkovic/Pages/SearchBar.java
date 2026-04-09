@@ -19,9 +19,8 @@ public class SearchBar {
     private WebDriverWait wait;
     private static final Logger log = LogManager.getLogger(SearchBar.class);
 
-    // Use a more reliable CSS selector (contains 'autocomplete' in id)
-    @FindBy(css = "input[id*='autocomplete']")
-    private WebElement searchInput;
+    // More robust locator: input with placeholder containing "Unesi pojam"
+    private By searchInputLocator = By.cssSelector("input[placeholder*='Unesi pojam']");
 
     @FindBy(xpath = "//button[@aria-label='Search']")
     private WebElement searchButton;
@@ -38,7 +37,8 @@ public class SearchBar {
     public void search(String text) {
         log.info("Searching for: {}", text);
         closePopupIfPresent();
-        wait.until(ExpectedConditions.visibilityOf(searchInput)).clear();
+        WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(searchInputLocator));
+        searchInput.clear();
         searchInput.sendKeys(text);
         wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
     }

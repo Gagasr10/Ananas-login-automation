@@ -5,8 +5,6 @@
     <classes>
       <class name="tests.LoginTest">
         <methods>
-          <include name="testValidLogin" invocation-numbers="0 1"/>
-          <include name="testResponsiveDesign" invocation-numbers="0 1"/>
           <include name="testAccountLockoutAfterFailedAttempts"/>
           <include name="testInvalidLoginCombinations" invocation-numbers="3"/>
           <include name="testMaxPasswordLength"/>

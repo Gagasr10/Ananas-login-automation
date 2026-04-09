@@ -1,7 +1,9 @@
 package dragan.stojilkovic.Pages;
 
 import java.time.Duration;
+import java.util.NoSuchElementException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -95,11 +97,16 @@ public class LoginPage {
     }
 
     public String getUsernameErrorMessage() {
-        return usernameErrorMessage.getText();
+        return driver.findElement(By.xpath("(//p[contains(@class, 'Mui-error')])[1]")).getText();
     }
 
     public String getPasswordErrorMessage() {
-        return passwordErrorMessage.getText();
+        try {
+            return driver.findElement(By.xpath("(//p[contains(@class, 'Mui-error')])[2]")).getText();
+        } catch (NoSuchElementException e) {
+            // If only one error (e.g., email field error), return empty string
+            return "";
+        }
     }
 
     public String getMinPasswordLengthErrorMessage() {

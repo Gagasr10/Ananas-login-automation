@@ -1,9 +1,15 @@
 package dragan.stojilkovic.Pages;
 
+import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
+
+import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -40,19 +46,36 @@ public class SearchBar {
     }
 
     private WebElement findSearchInput() {
+        // Wait for page to be fully loaded
+        wait.until(webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
+                .executeScript("return document.readyState").equals("complete"));
+
         By[] locators = {
             By.cssSelector("input[placeholder*='Unesi pojam']"),
             By.cssSelector("input[type='search']"),
-            By.xpath("//input[contains(@id, 'autocomplete')]")
+            By.xpath("//input[contains(@id, 'autocomplete')]"),
+            By.xpath("//input[@class='aa-Input']"),
+            By.cssSelector(".aa-Input")
         };
+
         for (By locator : locators) {
             try {
-                return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+                WebDriverWait longWait = new WebDriverWait(driver, Duration.ofSeconds(20));
+                return longWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
             } catch (TimeoutException e) {
                 log.debug("Locator not found: {}", locator);
             }
         }
-        throw new RuntimeException("Search input not found with any locator");
+
+        // Debug: take screenshot
+        try {
+            File screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+            FileUtils.copyFile(screenshot, new File("search-input-not-found.png"));
+            log.error("Screenshot saved as search-input-not-found.png");
+        } catch (IOException e) {
+            log.error("Failed to take screenshot");
+        }
+        throw new RuntimeException("Search input not found with any locator after 20 seconds");
     }
 
     private void closePopupIfPresent() {

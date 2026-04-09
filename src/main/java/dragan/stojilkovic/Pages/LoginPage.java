@@ -39,7 +39,7 @@ public class LoginPage {
     private WebElement usernameErrorMessage;
 
     @FindBy(xpath = "(//p[contains(@class, 'Mui-error')])[2]")
-    private WebElement passwordErrorMessageElement; // may not exist
+    private WebElement passwordErrorMessageElement;
 
     @FindBy(xpath = "//p[contains(text(), 'Minimum 8 karaktera.')]")
     private WebElement minPasswordLengthErrorMessage;
@@ -88,18 +88,22 @@ public class LoginPage {
     }
 
     public String getUsernameErrorMessage() {
+        wait.until(ExpectedConditions.visibilityOf(usernameErrorMessage));
         return usernameErrorMessage.getText();
     }
 
     public String getPasswordErrorMessage() {
         try {
-            return passwordErrorMessageElement.getText();
-        } catch (NoSuchElementException e) {
+            WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(5));
+            WebElement error = shortWait.until(ExpectedConditions.visibilityOf(passwordErrorMessageElement));
+            return error.getText();
+        } catch (TimeoutException e) {
             return "";
         }
     }
 
     public String getMinPasswordLengthErrorMessage() {
+        wait.until(ExpectedConditions.visibilityOf(minPasswordLengthErrorMessage));
         return minPasswordLengthErrorMessage.getText();
     }
 

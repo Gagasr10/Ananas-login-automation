@@ -1,69 +1,132 @@
-Test Plan for Login Functionality:
+Test Plan for Login & Search Functionality (Updated)
+Objective
+To validate the login and search functionality of the ananas.rs platform using a production‑grade automation framework.
+The objective is to ensure that all critical user journeys work correctly, edge cases are handled, security vulnerabilities are mitigated, and the UI is responsive – while maintaining a robust CI/CD pipeline.
 
-Objective:
-To test the login functionality of the Ananas.rs platform using Selenium WebDriver and TestNG. The objective is to ensure that
- all elements of the login functionality are working correctly and that the login process functions correctly with different 
- sets of valid and invalid data.
+Scope
+Login functionality – valid/invalid credentials, empty fields, password boundaries, SQL injection, XSS, forgot password link, account lockout (expected but missing), responsive design.
 
-Scope:
-Test the login functionality for different types of input (valid data, invalid data, empty fields, overly long passwords, SQL 
-injection, XSS attacks).
-Test the responsiveness of the UI on mobile devices and tablets.
-Test cross-browser compatibility (Chrome, Firefox, Edge).
+Search functionality – valid, empty, and invalid search queries.
 
-Types of Testing:
+Cross‑browser compatibility – Chrome, Firefox, Edge (via WebDriverManager).
 
-1.Functional Testing:
--Validation of successful login with valid credentials.
--Checking error messages for invalid inputs (incorrect email, incorrect password, empty fields).
+Responsive design – mobile (iPhone X) and tablet (iPad Pro) viewports.
 
-2.Security Testing:
--SQL injection tests.
--Testing special character inputs.
--Cross-Site Scripting (XSS) tests.
+CI/CD integration – GitHub Actions (automated on every push) and Jenkins pipeline (optional).
 
-3.Responsive Design Testing:
--Ensure the correct display and functionality on mobile devices and tablets.
+Containerisation – Docker support for isolated, reproducible test runs.
 
-4.Cross-browser Testing:
--Testing the functionality on different browsers (Chrome, Firefox, Edge).
+Types of Testing
+Type	Description
+Functional Testing	Valid login with correct credentials, error messages for invalid inputs, search with valid/invalid terms, forgot password link.
+Security Testing	SQL injection, XSS attacks, special characters in email fields.
+Responsive Design Testing	Login form display and functionality on mobile and tablet resolutions.
+Cross‑browser Testing	Chrome, Firefox, Edge (local runs).
+CI/CD & Container Testing	Headless execution in GitHub Actions and Docker, artifact generation (reports, screenshots, logs).
+Negative & Boundary Testing	Empty fields, password length boundaries (min 8 chars, max 300 chars – known app bug).
+Expected Errors / Edge Cases
+Empty username and password fields.
 
-Expected Errors:
--Empty username and password fields.
--Invalid email format.
--Incorrect password.
--Incorrect email with valid password combination.
--Overly long password.
--SQL injection attempts.
+Invalid email format (missing @, missing dot, special characters).
+
+Incorrect password for a valid email.
+
+Incorrect email with valid password.
+
+Overly long password (300 characters – app returns generic error, not specific).
+
+SQL injection attempts in username field.
+
 XSS injection attempts.
 
-Test Cases:
-Here’s the complete list of 19 test cases:
+Account lockout after 5 failed attempts (not implemented – test disabled).
 
-TC1: Valid login credentials (correct email and password).
-TC2: Valid login with a two-character username.
-TC3: Invalid password with a valid email.
-TC4: Invalid login with mixed valid and invalid credentials.
-TC5: Invalid email with a valid password.
-TC6: Login attempt with empty fields.
-TC7: Empty email field with a valid password.
-TC8: Verify the "Forgot Password" link functionality.
-TC9: Maximum password length (e.g., 300 characters).
-TC10: Minimum password length (e.g., less than 8 characters).
-TC11: Login with a password that is exactly 7 characters.
-TC12: Lockout functionality after multiple failed attempts.
-TC13: Invalid email format with special characters.
-TC14: Invalid email format (missing "@" symbol).
-TC15: SQL injection attack in the username field.
-TC16: Cross-site scripting (XSS) attack in the username field.
-TC17: Responsive design test for mobile devices (e.g., iPhone X).
-TC18: Responsive design test for tablet devices (e.g., iPad Pro).
-TC19: Cross-browser test to verify the login works in Firefox and Edge.
+Test Cases (20 total)
+ID	Test Name	Status / Notes
+TC1	Valid login (John)	✅ Passes locally, skipped in CI
+TC2	Valid login (Ed)	✅ Passes locally, skipped in CI
+TC3	Invalid password	✅ Passes
+TC4	Mixed valid/invalid credentials	✅ Passes
+TC5	Invalid email with valid password	✅ Passes
+TC6	Empty email and password fields	✅ Passes
+TC7	Empty email field only	✅ Passes
+TC8	Forgot password link	✅ Passes
+TC9	Maximum password length (300 chars)	⚠️ Disabled – known app bug (no specific error)
+TC10	Minimum password length (<8 chars)	✅ Passes
+TC11	Password boundary (7 chars)	✅ Passes
+TC12	Account lockout after 5 attempts	⚠️ Disabled – known app bug (no lockout)
+TC13	Special characters in email	✅ Passes
+TC14	Invalid email format (missing dot)	✅ Passes
+TC15	Missing '@' symbol in email	✅ Passes
+TC16	SQL injection in username	✅ Passes
+TC17	XSS in username	✅ Passes
+TC18	Responsive design – mobile (375×812)	✅ Passes locally, skipped in CI
+TC19	Responsive design – tablet (1024×1366)	✅ Passes locally, skipped in CI
+TC20	Search – valid query ("Laptop")	✅ Passes locally, skipped in CI
+TC21	Search – empty query	✅ Passes locally, skipped in CI
+TC22	Search – invalid query (random string)	✅ Passes locally, skipped in CI
+Notes:
 
-Tools:
--Selenium WebDriver for test automation.
--TestNG for test case management and parallel execution.
--Extent Reports for generating detailed test reports.
--GitHub for version control and repository management.
+Tests skipped in CI are marked with SkipException due to headless environment limitations (login redirect unstable, search element not reliably found). They pass when run locally with a visible browser.
 
+Two tests are disabled (@Test(enabled = false)) because the target application does not implement the expected security features (account lockout, specific password length error). These are documented as known application bugs.
 
+Tools & Technologies
+Category	Tools
+Test Framework	TestNG 7.10.2
+Browser Automation	Selenium WebDriver 4.27.0
+Driver Management	WebDriverManager 5.9.2
+Reporting	ExtentReports 5.1.2
+Logging	Log4j2 2.23.1
+Build Tool	Maven 3.9+
+CI/CD	GitHub Actions (workflow), Jenkins (Jenkinsfile)
+Containerisation	Docker (Dockerfile)
+Version Control	Git / GitHub
+Programming Language	Java 17
+Key Framework Features
+Page Object Model (POM) – maintainable, reusable page classes.
+
+Data Providers – reduce code duplication for similar test scenarios.
+
+Soft Assertions – collect multiple failures in a single test.
+
+Retry Analyzer – automatic retry of flaky tests (up to 2 times).
+
+Headless Mode – automatically enabled in CI/Docker environments.
+
+Parallel Execution – TestNG XML for cross‑browser parallel runs.
+
+Log4j2 – console and file logging with different levels (info, warn, debug).
+
+ExtentReports – HTML reports with screenshots on failure.
+
+Execution & Reporting
+Local Execution
+bash
+mvn clean test                     # Chrome (default)
+mvn clean test -Dbrowser=firefox   # Firefox
+mvn clean test -Dtest=LoginTest    # Run only LoginTest
+CI Execution (GitHub Actions)
+Triggered on every push to main branch.
+
+Runs on Ubuntu latest with headless Chrome.
+
+Generates and uploads ExtentReport, screenshots, and logs as artifacts.
+
+Docker Execution
+bash
+docker build -t ananas-tests .
+docker run --rm -v "$(pwd)/extent-reports:/app/extent-reports" ananas-tests
+Reports
+HTML report: extent-reports/extent-report.html
+
+Screenshots: screenshots/ (only on failures)
+
+Logs: logs/automation.log
+
+Known Limitations & Future Improvements
+Application bugs – two tests disabled until the application implements lockout and password length validation.
+
+CI headless issues – login redirect and search input are not reliable in GitHub Actions; affected tests are skipped in CI but pass locally.
+
+Potential improvement – Use undetected-chromedriver or a real browser cloud service (SauceLabs, BrowserStack) for CI.

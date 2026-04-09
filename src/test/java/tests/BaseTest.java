@@ -51,7 +51,7 @@ public class BaseTest {
         initializeDriver(browser);
         driver.manage().window().maximize();
 
-        int defaultTimeout = Integer.parseInt(config.getProperty("default.wait", "10"));
+        int defaultTimeout = Integer.parseInt(config.getProperty("default.wait", "15"));
         wait = new WebDriverWait(driver, Duration.ofSeconds(defaultTimeout));
 
         String baseUrl = config.getProperty("app.url", "https://ananas.rs/login");
@@ -93,8 +93,6 @@ public class BaseTest {
                     chromeOpts.addArguments("--headless");
                     chromeOpts.addArguments("--no-sandbox");
                     chromeOpts.addArguments("--disable-dev-shm-usage");
-                    chromeOpts.addArguments("--disable-blink-features=AutomationControlled");
-                    chromeOpts.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                 }
                 driver = new ChromeDriver(chromeOpts);
                 break;

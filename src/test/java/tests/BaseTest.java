@@ -125,8 +125,8 @@ public class BaseTest {
     }
 
     /** Detects if the tests are running in a CI/Docker environment. */
-    private boolean isRunningInCI() {
-        return "true".equals(System.getenv("CI")) || "true".equals(System.getenv("DOCKER"));
+    protected boolean isRunningInCI() {
+        return "true".equals(System.getenv("CI")) || "true".equals(System.getenv("GITHUB_ACTIONS"));
     }
 
     /** Handles cookie consent and popups if present. */

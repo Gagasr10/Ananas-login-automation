@@ -20,6 +20,7 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
+import org.openqa.selenium.JavascriptExecutor;
 
 import dragan.stojilkovic.Pages.LoginPage;
 import dragan.stojilkovic.Pages.SearchBar;
@@ -55,6 +56,8 @@ public class BaseTest {
 
         String baseUrl = config.getProperty("app.url", "https://ananas.rs/login");
         driver.get(baseUrl);
+        // Wait for the page to be interactive
+        wait.until(webDriver -> ((JavascriptExecutor) webDriver).executeScript("return document.readyState").equals("complete"));
 
         loginPage = new LoginPage(driver, wait);
         searchBar = new SearchBar(driver, wait);
@@ -84,12 +87,14 @@ public class BaseTest {
                 WebDriverManager.chromedriver().setup();
                 ChromeOptions chromeOpts = new ChromeOptions();
                 chromeOpts.addArguments("--disable-notifications");
-                // Enable headless mode when running in CI/Docker environment
+                chromeOpts.addArguments("--window-size=1920,1080");
+                chromeOpts.addArguments("--disable-gpu");
                 if (isRunningInCI()) {
                     chromeOpts.addArguments("--headless");
                     chromeOpts.addArguments("--no-sandbox");
                     chromeOpts.addArguments("--disable-dev-shm-usage");
-                    log.info("Running Chrome in headless mode (CI environment)");
+                    chromeOpts.addArguments("--disable-blink-features=AutomationControlled");
+                    chromeOpts.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
                 }
                 driver = new ChromeDriver(chromeOpts);
                 break;

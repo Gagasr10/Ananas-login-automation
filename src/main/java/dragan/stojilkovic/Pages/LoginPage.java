@@ -104,8 +104,7 @@ public class LoginPage {
         try {
             return driver.findElement(By.xpath("(//p[contains(@class, 'Mui-error')])[2]")).getText();
         } catch (NoSuchElementException e) {
-            // If only one error (e.g., email field error), return empty string
-            return "";
+            return ""; // second error not present
         }
     }
 

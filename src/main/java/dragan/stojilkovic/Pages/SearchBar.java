@@ -1,7 +1,6 @@
 package dragan.stojilkovic.Pages;
 
 import java.time.Duration;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -19,9 +18,6 @@ public class SearchBar {
     private WebDriverWait wait;
     private static final Logger log = LogManager.getLogger(SearchBar.class);
 
-    // More robust locator: input with placeholder containing "Unesi pojam"
-    private By searchInputLocator = By.cssSelector("input[placeholder*='Unesi pojam']");
-
     @FindBy(xpath = "//button[@aria-label='Search']")
     private WebElement searchButton;
 
@@ -37,10 +33,28 @@ public class SearchBar {
     public void search(String text) {
         log.info("Searching for: {}", text);
         closePopupIfPresent();
-        WebElement searchInput = wait.until(ExpectedConditions.visibilityOfElementLocated(searchInputLocator));
+
+        // Try multiple locators for the search input
+        WebElement searchInput = findSearchInput();
         searchInput.clear();
         searchInput.sendKeys(text);
         wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
+    }
+
+    private WebElement findSearchInput() {
+        By[] locators = {
+            By.cssSelector("input[placeholder*='Unesi pojam']"),
+            By.cssSelector("input[type='search']"),
+            By.xpath("//input[contains(@id, 'autocomplete')]")
+        };
+        for (By locator : locators) {
+            try {
+                return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+            } catch (TimeoutException e) {
+                log.debug("Locator not found: {}", locator);
+            }
+        }
+        throw new RuntimeException("Search input not found with any locator");
     }
 
     private void closePopupIfPresent() {

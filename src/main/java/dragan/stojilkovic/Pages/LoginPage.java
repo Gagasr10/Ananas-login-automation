@@ -1,9 +1,9 @@
 package dragan.stojilkovic.Pages;
 
 import java.time.Duration;
-import java.util.NoSuchElementException;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,10 +12,6 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-/**
- * Page Object Model class for the login page.
- * Contains all web elements and methods to interact with the login form.
- */
 public class LoginPage {
 
     private WebDriver driver;
@@ -43,7 +39,7 @@ public class LoginPage {
     private WebElement usernameErrorMessage;
 
     @FindBy(xpath = "(//p[contains(@class, 'Mui-error')])[2]")
-    private WebElement passwordErrorMessage;
+    private WebElement passwordErrorMessageElement; // may not exist
 
     @FindBy(xpath = "//p[contains(text(), 'Minimum 8 karaktera.')]")
     private WebElement minPasswordLengthErrorMessage;
@@ -54,11 +50,6 @@ public class LoginPage {
     @FindBy(xpath = "//a[span[text()='Zaboravili ste lozinku?']]")
     private WebElement forgotPasswordLink;
 
-    /**
-     * Constructor initialises WebDriver, WebDriverWait and PageFactory.
-     * @param driver WebDriver instance
-     * @param wait Pre‑configured WebDriverWait (from BaseTest)
-     */
     public LoginPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
         this.wait = wait;
@@ -97,12 +88,12 @@ public class LoginPage {
     }
 
     public String getUsernameErrorMessage() {
-        return driver.findElement(By.xpath("(//p[contains(@class, 'Mui-error')])[1]")).getText();
+        return usernameErrorMessage.getText();
     }
 
     public String getPasswordErrorMessage() {
         try {
-            return driver.findElement(By.xpath("(//p[contains(@class, 'Mui-error')])[2]")).getText();
+            return passwordErrorMessageElement.getText();
         } catch (NoSuchElementException e) {
             return "";
         }
@@ -117,7 +108,6 @@ public class LoginPage {
         return userNameElement.getText();
     }
 
-    /** Closes the popup if it appears; does nothing otherwise. */
     public void closePopup() {
         try {
             WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(2));

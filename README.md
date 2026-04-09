@@ -9,6 +9,8 @@
 [![Jenkins](https://img.shields.io/badge/Jenkins-Pipeline-orange.svg)](https://www.jenkins.io/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+[![Selenium Tests](https://github.com/Gagasr10/Ananas-login-automation/actions/workflows/test.yml/badge.svg)](https://github.com/Gagasr10/Ananas-login-automation/actions/workflows/test.yml)
+
 Automated UI tests for the **login functionality** and **search feature** of **[ananas.rs](https://ananas.rs)** – a Serbian e‑commerce platform similar to Amazon.  
 The project is written in Java using Selenium WebDriver, TestNG, and Maven, following the **Page Object Model (POM)** design pattern.  
 It features **professional logging (Log4j2)**, **automatic retry of flaky tests**, **data providers**, **soft assertions**, and **detailed ExtentReports** with screenshots on test failures.  
@@ -228,4 +230,4 @@ This is a personal portfolio project, but suggestions and improvements are welco
 This project is licensed under the MIT License – see the LICENSE file for details (optional, you can add a LICENSE file if you want).
 
 📧 Contact
-Created by Dragan Stojilković – GitHub Profile
+Created by Dragan Stojilković – Gagasr10

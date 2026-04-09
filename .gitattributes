@@ -1,0 +1,4 @@
+# Exclude generated HTML reports from language statistics
+extent-reports/*.html linguist-vendored
+screenshots/* linguist-vendored
+*.html linguist-language=Java

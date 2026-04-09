@@ -2,8 +2,9 @@ package dragan.stojilkovic.Pages;
 
 import java.time.Duration;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,66 +13,73 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * Page Object for the search bar component.
+ */
 public class SearchBar {
 
-    WebDriver driver;
-    WebDriverWait wait;
+    private WebDriver driver;
+    private WebDriverWait wait;
+    private static final Logger log = LogManager.getLogger(SearchBar.class);
 
     @FindBy(xpath = "//input[@id='autocomplete-1-input']")
-    WebElement searchBar;
+    private WebElement searchInput;
 
     @FindBy(xpath = "//button[@aria-label='Search']")
-    WebElement searchButton;
+    private WebElement searchButton;
 
     @FindBy(xpath = "//button[@aria-label='zatvori popup']")
-    WebElement closeButton;
+    private WebElement closeButton;
 
-   
-    @FindBy(css = "div.ais-Hits-list")
-    WebElement searchResults;
-
-    
-    public SearchBar(WebDriver driver) {
+    /**
+     * Constructor.
+     * @param driver WebDriver instance
+     * @param wait Pre‑configured WebDriverWait
+     */
+    public SearchBar(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        this.wait = wait;
         PageFactory.initElements(driver, this);
     }
 
-   
+    /**
+     * Performs a search with the given text.
+     * @param text search query
+     */
     public void search(String text) {
-        System.out.println("Performing search for: " + text);
+        log.info("Searching for: {}", text);
         closePopupIfPresent();
-        wait.until(ExpectedConditions.visibilityOf(searchBar));
-        searchBar.clear();
-        searchBar.sendKeys(text);
-        wait.until(ExpectedConditions.elementToBeClickable(searchButton));
-        searchButton.click();
+        wait.until(ExpectedConditions.visibilityOf(searchInput)).clear();
+        searchInput.sendKeys(text);
+        wait.until(ExpectedConditions.elementToBeClickable(searchButton)).click();
     }
 
-   
-    public void closePopupIfPresent() {
+    /** Closes any popup that might block the search, if present. */
+    private void closePopupIfPresent() {
         try {
             WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(2));
             WebElement popup = shortWait.until(ExpectedConditions.elementToBeClickable(closeButton));
             if (popup.isDisplayed()) {
                 popup.click();
-                System.out.println("Popup closed.");
+                log.debug("Closed popup");
             }
         } catch (TimeoutException e) {
-            System.out.println("No popup to close.");
+            log.debug("No popup present");
         }
     }
 
-    
+    /**
+     * Checks if search results are displayed.
+     * Waits for at least one result item to appear in the DOM.
+     * @return true if results are present, false otherwise
+     */
     public boolean areResultsDisplayed() {
         try {
-            // Sačekaj da se pojavi bar jedan proizvod u listi rezultata
-            WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement firstResult = shortWait.until(ExpectedConditions.presenceOfElementLocated(
-                By.cssSelector("ul.ais-Hits-list li.ais-Hits-item")
-            ));
-            return firstResult.isDisplayed();
+            wait.until(ExpectedConditions.presenceOfElementLocated(
+                By.cssSelector("ul.ais-Hits-list li.ais-Hits-item")));
+            return true;
         } catch (TimeoutException e) {
+            log.warn("Search results not displayed");
             return false;
         }
     }

@@ -1,14 +1,20 @@
 package tests;
 
+
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -20,100 +26,105 @@ import dragan.stojilkovic.Pages.LoginPage;
 import dragan.stojilkovic.Pages.SearchBar;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-@Listeners(TestListener.class)
+/**
+ * Base class for all test classes.
+ * Handles WebDriver setup, configuration loading, logging, and teardown.
+ */
+@Listeners({TestListener.class, RetryListener.class})
 public class BaseTest {
 
     protected WebDriver driver;
     protected WebDriverWait wait;
     protected LoginPage loginPage;
     protected SearchBar searchBar;
-    protected Properties config;  // Added: for loading config.properties
+    protected Properties config;
+    protected Logger log = LogManager.getLogger(getClass());
 
-    // Public getter for WebDriver
-    public WebDriver getDriver() {
-        return driver;
-    }
-
-    @BeforeMethod
+    /**
+     * Initializes the browser, loads configuration, and navigates to the application URL.
+     * @param browser Browser name (chrome, firefox, edge) – passed from TestNG XML or default chrome.
+     */
+    @BeforeMethod(alwaysRun = true)
     @Parameters("browser")
     public void setUp(@Optional("chrome") String browser) {
-        // Load config file (email, password, URL, timeout...)
         loadConfig();
-
-        // Initialize the WebDriver based on the selected browser
         initializeDriver(browser);
-
-        // Set browser properties
         driver.manage().window().maximize();
 
-        // Define wait object (timeout can also be taken from config if desired)
-        wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+        int defaultTimeout = Integer.parseInt(config.getProperty("default.wait", "10"));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(defaultTimeout));
 
-        // Navigate to the application URL - now from config file
         String baseUrl = config.getProperty("app.url", "https://ananas.rs/login");
         driver.get(baseUrl);
 
-        // Initialize page objects
-        loginPage = new LoginPage(driver);
-        searchBar = new SearchBar(driver);
-
-        // Handle cookies and popups
+        loginPage = new LoginPage(driver, wait);
+        searchBar = new SearchBar(driver, wait);
         handlePopUps();
+
+        log.info("Test setup completed for browser: {}", browser);
     }
 
-    /**
-     * Loads the config.properties file from src/test/resources
-     */
+    /** Loads configuration from src/test/resources/config.properties. */
     private void loadConfig() {
         config = new Properties();
         String configPath = "src/test/resources/config.properties";
         try (FileInputStream fis = new FileInputStream(configPath)) {
             config.load(fis);
-            System.out.println("Config file loaded successfully.");
+            log.info("Configuration loaded from {}", configPath);
         } catch (IOException e) {
-            System.out.println("Warning: Config file not found at " + configPath + ". Using default values.");
-            // If file does not exist, set default values (optional)
+            log.error("Config file not found at {}, using defaults", configPath);
             config.setProperty("app.url", "https://ananas.rs/login");
+            config.setProperty("default.wait", "10");
         }
     }
 
+    /** Initializes the WebDriver with browser-specific options. */
     private void initializeDriver(String browser) {
         switch (browser.toLowerCase()) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
-                driver = new ChromeDriver();
-                System.out.println("Initialized Chrome browser.");
+                ChromeOptions chromeOpts = new ChromeOptions();
+                chromeOpts.addArguments("--disable-notifications");
+                driver = new ChromeDriver(chromeOpts);
                 break;
             case "firefox":
                 WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
-                System.out.println("Initialized Firefox browser.");
+                FirefoxOptions firefoxOpts = new FirefoxOptions();
+                firefoxOpts.addPreference("dom.webnotifications.enabled", false);
+                driver = new FirefoxDriver(firefoxOpts);
                 break;
             case "edge":
                 WebDriverManager.edgedriver().setup();
-                driver = new EdgeDriver();
-                System.out.println("Initialized Edge browser.");
+                EdgeOptions edgeOpts = new EdgeOptions();
+                edgeOpts.addArguments("--disable-notifications");
+                driver = new EdgeDriver(edgeOpts);
                 break;
             default:
                 throw new IllegalArgumentException("Unsupported browser: " + browser);
         }
+        log.info("Initialized {} browser", browser);
     }
 
+    /** Handles cookie consent and popups if present. */
     private void handlePopUps() {
         try {
             loginPage.acceptCookies();
             loginPage.closePopup();
-            System.out.println("Handled cookies and popups.");
         } catch (Exception e) {
-            System.out.println("No cookies or popups to handle.");
+            log.debug("No cookies or popups to handle: {}", e.getMessage());
         }
     }
 
-    @AfterMethod
+    /** Closes the browser after each test method. */
+    @AfterMethod(alwaysRun = true)
     public void tearDown() {
         if (driver != null) {
             driver.quit();
-            System.out.println("Browser closed.");
+            log.info("Browser closed");
         }
+    }
+
+    public WebDriver getDriver() {
+        return driver;
     }
 }

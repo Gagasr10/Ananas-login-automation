@@ -10,40 +10,32 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+/**
+ * Page Object Model class for the login page.
+ * Contains all web elements and methods to interact with the login form.
+ */
 public class LoginPage {
-    WebDriver driver;
-    WebDriverWait wait;
 
-    // Username input field located by XPath
+    private WebDriver driver;
+    private WebDriverWait wait;
+
     @FindBy(xpath = "//input[@id='username']")
-    WebElement username;
+    private WebElement usernameField;
 
-    // Password input field located by XPath
     @FindBy(xpath = "//input[@id='password']")
-    WebElement password;
+    private WebElement passwordField;
 
-    // Login button located by XPath
     @FindBy(xpath = "//button[@id='login-submit']")
-    WebElement loginBtn;
+    private WebElement loginButton;
 
-    // Error message displayed when login fails, located by XPath
     @FindBy(xpath = "//p[contains(text(),'Email ili lozinka nisu u redu')]")
-    WebElement loginErrorMessage;
+    private WebElement loginErrorMessage;
 
-    // Accept cookies button located by XPath
     @FindBy(xpath = "//button[text()='Slažem se']")
-    WebElement acceptCookiesButton;
+    private WebElement acceptCookiesButton;
 
-    // Remember me checkbox located by XPath
-    @FindBy(xpath = "//input[@id='rememberMeCheckbox']")
-    WebElement rememberMeCheckbox;
-
-    // Forgot password link located by XPath
-    @FindBy(xpath = "//a[span[text()='Zaboravili ste lozinku?']]")
-    WebElement forgotPasswordLink;
-
-    @FindBy(xpath = "//div[@id='errorMessage']")
-    WebElement errorMessag;
+    @FindBy(xpath = "//button[@aria-label='zatvori popup']")
+    private WebElement closeButton;
 
     @FindBy(xpath = "(//p[contains(@class, 'Mui-error')])[1]")
     private WebElement usernameErrorMessage;
@@ -52,73 +44,60 @@ public class LoginPage {
     private WebElement passwordErrorMessage;
 
     @FindBy(xpath = "//p[contains(text(), 'Minimum 8 karaktera.')]")
-    public WebElement minPasswordLengthErrorMessage;
+    private WebElement minPasswordLengthErrorMessage;
 
     @FindBy(xpath = "//span[@class='sc-79pcpx-0 ieekjL']")
-    WebElement userName;
+    private WebElement loggedInUserName;
 
-    // Close popup button
-    @FindBy(xpath = "//button[@aria-label='zatvori popup']")
-    WebElement closeButton;
-    
-    
+    @FindBy(xpath = "//a[span[text()='Zaboravili ste lozinku?']]")
+    private WebElement forgotPasswordLink;
 
-    // Constructor for the LoginPage class that initializes web elements using PageFactory
-    public LoginPage(WebDriver driver) {
+    /**
+     * Constructor initialises WebDriver, WebDriverWait and PageFactory.
+     * @param driver WebDriver instance
+     * @param wait Pre‑configured WebDriverWait (from BaseTest)
+     */
+    public LoginPage(WebDriver driver, WebDriverWait wait) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(5));  // WebDriverWait set to 5 seconds
+        this.wait = wait;
         PageFactory.initElements(driver, this);
     }
 
-    // Method to set the username in the username input field
     public void setUsername(String user) {
-        username.sendKeys(user);
+        usernameField.sendKeys(user);
     }
 
-    // Method to set the password in the password input field
     public void setPassword(String pass) {
-        password.sendKeys(pass);
+        passwordField.sendKeys(pass);
     }
 
-    // Method to click the login button
     public void clickLogin() {
-        loginBtn.click();
+        loginButton.click();
     }
 
-    // Combined method for login
     public void login(String user, String pass) {
         setUsername(user);
         setPassword(pass);
         clickLogin();
     }
 
-    // Method to retrieve the error message displayed after a failed login attempt
     public String getErrorMessage() {
-        wait.until(ExpectedConditions.visibilityOf(loginErrorMessage));  // Wait until the login error message is visible
+        wait.until(ExpectedConditions.visibilityOf(loginErrorMessage));
         return loginErrorMessage.getText();
     }
 
-    // Method to click the accept cookies button
     public void acceptCookies() {
         acceptCookiesButton.click();
     }
 
-    // Method to click the "Remember me" checkbox
-    public void clickRememberMe() {
-        rememberMeCheckbox.click();
-    }
-
-    // Method to click the "Forgot Password" link
     public void clickForgotPassword() {
         forgotPasswordLink.click();
     }
 
-    // Method to get the error message for the username field
     public String getUsernameErrorMessage() {
         return usernameErrorMessage.getText();
     }
 
-    // Method to get the error message for the password field
     public String getPasswordErrorMessage() {
         return passwordErrorMessage.getText();
     }
@@ -128,26 +107,20 @@ public class LoginPage {
     }
 
     public String getLoggedInUserName() {
-        WebElement userNameElement = wait.until(ExpectedConditions.visibilityOf(userName));
+        WebElement userNameElement = wait.until(ExpectedConditions.visibilityOf(loggedInUserName));
         return userNameElement.getText();
     }
 
-    // Method to close popup if it appears
+    /** Closes the popup if it appears; does nothing otherwise. */
     public void closePopup() {
         try {
-            // Use a short wait to quickly check for the popup
             WebDriverWait shortWait = new WebDriverWait(driver, Duration.ofSeconds(2));
-
-            // Wait for the close button of the popup to be clickable
             WebElement popup = shortWait.until(ExpectedConditions.elementToBeClickable(closeButton));
-
-            // If the popup is displayed, click to close it
             if (popup.isDisplayed()) {
                 popup.click();
                 System.out.println("Popup closed.");
             }
         } catch (TimeoutException e) {
-            // If popup does not appear, continue the test
             System.out.println("Popup not found, continuing with the test.");
         }
     }
